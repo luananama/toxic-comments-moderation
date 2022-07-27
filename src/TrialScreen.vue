@@ -1,0 +1,218 @@
+<template>
+  <ForcedChoiceScreen
+    :options="options"
+    :progress="progress"
+    :text="text"
+    :instructions="instructions"
+    :task="task"
+    :comprehension="comprehension"
+    :feedbackTime="-1"
+    question=""
+    >
+     
+      <template #stimulus>
+        <div class="hintstext">
+             <p v-if="trialType==='training'" >
+          <b>{{instructions}}</b>
+        </p>
+          </div>
+
+        <div v-bind:class = "comprehension?'comprehension':'stimulus'">
+          <div class="text">
+            <p>
+              {{text}}
+            </p>
+          </div>
+          <div v-if="task===true" class="score">
+          
+            <p v-if="group==='score' || trialType ==='training'" > 
+            _______________________________________
+            <br>
+            <br>
+
+            This comment is {{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic.
+            </p>
+            <p v-else-if="group==='no_score'">
+              _________________________________________________________
+              <br>
+              <br>
+
+              The AI doesn't have a score available for this comment...
+            </p>
+          </div>
+        </div>
+
+        <Record
+            :data="{
+              trialID: trialnumber,
+              textID: trial.id, 
+              category: trial.category, 
+              toxicityScore: trial.toxicity_score,
+              profanityScore: trial.profanity_score,
+              phase: trialType,
+              group: group,
+              correctResponse: trial.correct_response,
+              comprehensionResponse: trial.comprehension_vulnerable,
+              response: $magpie.measurements.response
+            }"
+          />
+      </template>
+      
+      <!-- During training provide feedback to the participants about their answers -->
+      <template  v-if="trialType==='training' && task===true" #feedback>
+          <div class="instructionstext">
+          <p v-if="$magpie.measurements.response === trial.correctResponse">
+            Correct! The comment should be rejected because{{trial.explanation}}
+            <button @click="$magpie.nextScreen()">Ok</button>
+          </p>
+          <!-- If the answer was incorrect provide an explanation why -->
+          <p v-else>
+            Incorrect
+            The comment should be rejected because{{trial.explanation}}.
+            <button @click="$magpie.nextScreen()">Ok</button>
+          </p>
+          </div>
+        </template> 
+        <!-- Skip feedback during experiment phase. Couldn't find a better way to do this -->
+        <template v-else #feedback>
+           
+          <Wait :time="1" @done= "$magpie.nextScreen()" />
+        </template>
+    </ForcedChoiceScreen>
+</template>
+<script>
+
+// some questions will be shown the toxicity score, others not
+
+export default {
+  name: 'TrialScreen',
+  props: {
+    trial: {
+      type: Object,
+      required: true
+    },
+    trialType: {
+      type: String,
+      required: true
+    },
+    trialnumber: {
+      type: Number,
+      required: true
+    },
+    progress: {
+      type: Number,
+      required: true
+    },
+    options: {
+      type: Array,
+      required: true
+    },
+    text: {
+      type: String,
+      required: true
+    },
+    instructions: {
+      type: String,
+      required: false
+    },
+    task: {
+      type: Boolean,
+      required: true
+    },
+    comprehension: {
+      type: Boolean,
+      required: false
+    },
+  },
+  data() {
+    const group = _.sample(['score', 'no_score']);
+    
+    return {
+      group: group
+    }
+  },
+};
+
+</script>
+
+<style>
+
+
+.stimulus {
+    border: solid #6D2445 1px;
+    background-color: #FAFAFA;
+    height:400px; /* or whatever width you want. */
+    max-height:400px; /* or whatever width you want. */
+    margin-bottom:20px;
+    margin-top:20px;
+    
+  
+}
+
+.text {
+    font-family: "Open Sans", sans-serif, Helvetica, Arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 30px;
+    color: #373434;
+}
+
+
+.hintstext {
+    font-family: "Open Sans", sans-serif, Helvetica, Arial;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: left;
+    padding: 30px;
+    color: #373434;
+}
+
+.comprehension {
+  height:290px; /* or whatever width you want. */
+  max-height:350px; /* or whatever width you want. */
+  margin-bottom:20px;
+  margin-top:20px;
+  justify-content: center;
+  align-items: center;
+  background: #fffdfd;
+  box-shadow: 1px 1px 10px #6D2445;
+
+  font-family: "Open Sans", sans-serif, Helvetica, Arial;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+  padding: 30px;
+  color: #373434;
+  
+}
+
+.score {
+    font-family: "Open Sans", sans-serif, Helvetica, Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: #6E7378;
+    text-align: left;
+    padding: 30px;
+}
+.feedback {
+   font-family: "Open Sans", sans-serif, Helvetica, Arial;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    padding: 30px;
+    color: #373434;
+    height:350px; /* or whatever width you want. */
+    max-height:350px; /* or whatever width you want. */
+    margin-bottom:20px;
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+</style>
+
