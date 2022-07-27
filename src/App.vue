@@ -185,8 +185,7 @@ export default {
   data() {
     // randomly sample n items for the practice phase
     const practice_trials = _.sampleSize(_.shuffle(practice), 1);
-    // const main_trials = _.sampleSize(_.shuffle(main), 4);
-    const main_trials = _.shuffle(main);
+    const main_trials = _.sampleSize(_.shuffle(main), 6);
 
     const comprehension_question = "Does the comment reference a group that is considered vulnerable, disadvantaged, or often discriminated against?";
     // 
