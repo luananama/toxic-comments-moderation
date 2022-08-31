@@ -88,28 +88,28 @@
       <!-- The task, where the participant can make a decision  -->
       <TrialScreen v-if="group==='score'"
         :trial="trial"
-        :key="'training-' + i"
+        :key="'training-score-' + i"
         :trialType="'training'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
         :options="['Approve', 'Reject']"
         :text="trial.text"
         :instructions="'Notice the TOXICITY SCORE. Reject the comment if you think it is toxic, approve it otherwise.'"
-        :question="' '"
+        :question="emoji(128718)"
         :task="true"
         :group=group
       />
 
       <TrialScreen v-else
         :trial="trial"
-        :key="'training-' + i"
+        :key="'training-no-score-' + i"
         :trialType="'training'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
         :options="['Approve', 'Reject']"
         :text="trial.text"
         :instructions="'Reject the comment if you think it is toxic, approve it otherwise.'"
-        :question="'Moderate the comment:'"
+        :question="emoji(128718)"
         :task="true"
         :group=group
       />
@@ -120,7 +120,7 @@
       <!-- comprehension question is provided with a higher probability than in the experiment phase -->
       <TrialScreen v-if="Math.random() < 0.8"
         :trial="trial"
-        :key="'training-' + i"
+        :key="'training-comprehension-' + i"
         :trialType="'training'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
@@ -180,7 +180,7 @@
 
       <TrialScreen v-if="group==='score'"
         :trial="trial"
-        :key="'experiment-' + i"
+        :key="'experiment-manipulation-check-' + i"
         :trial-type="'experiment'"
         :trialnumber="i"
         :progress="i/main_trials.length"
@@ -197,7 +197,7 @@
 <!-- Comprehension question is provided with a higher probability than in the experiment phase -->
       <TrialScreen v-if="Math.random() < 0.2"
         :trial="trial"
-        :key="'experiment-' + i"
+        :key="'experiment-comprehension-' + i"
         :trialType="'experiment'"
         :trialnumber="i"
         :progress="i / main_trials.length"

@@ -10,34 +10,32 @@
     :feedbackTime="-1"
     :question="question"
     >
-     
+      
       <template #stimulus>
+
         <div class="hintstext">
-             <p v-if="trialType==='training'" >
-          <b>{{instructions}}</b>
-        </p>
-          </div>
+            <p v-if="trialType==='training'" >
+              <b>{{instructions}}</b>
+            </p>
+        </div>
 
         <div v-bind:class = "comprehension?'comprehension':'stimulus'">    
-          <br>
-              
+          <br>  
           <br>      
           <div class="text">
             <p>
               {{text}}
             </p>
           </div>
-<br>
-          <div v-if="task===true" class="score">
-          
-          <p v-if="group==='score'"> 
-         
-          {{emoji(128226)}}  
-          This comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
           <br>
-          </p>
-        </div>
-
+          <div v-if="task===true && group==='score'" class="score">
+            <!-- <p v-if="group==='score'">  -->
+              <p>
+              {{emoji(128226)}}  
+              The AI says this comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
+              <br>
+            </p>
+          </div>
         </div>
 
         <Record
