@@ -8,7 +8,7 @@
     :comprehension="comprehension"
     :group="group"
     :feedbackTime="-1"
-    question=""
+    :question="question"
     >
      
       <template #stimulus>
@@ -18,29 +18,26 @@
         </p>
           </div>
 
-        <div v-bind:class = "comprehension?'comprehension':'stimulus'">
-          
-          <div v-if="task===true" class="score">
-          
-            <p v-if="group==='score' || trialType ==='training'" > 
-           
-            {{emoji(128226)}}  
-            This comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
-            <br>
-            </p>
-            
-            <p v-else-if="group==='no_score'">
-              {{emoji(128564)}}
-              The AI doesn't have a score available for this comment...
-              <br>
-            </p>
-          </div>
-          
+        <div v-bind:class = "comprehension?'comprehension':'stimulus'">    
+          <br>
+              
+          <br>      
           <div class="text">
             <p>
               {{text}}
             </p>
           </div>
+<br>
+          <div v-if="task===true" class="score">
+          
+          <p v-if="group==='score'"> 
+         
+          {{emoji(128226)}}  
+          This comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
+          <br>
+          </p>
+        </div>
+
         </div>
 
         <Record
@@ -61,15 +58,17 @@
       
       <!-- During training provide feedback to the participants about their answers -->
       <template  v-if="trialType==='training' && task===true" #feedback>
-          <div class="instructionstext">
+          <div class="feedbacktext">
           <p v-if="$magpie.measurements.response === trial.correctResponse">
-            Correct! The comment should be rejected because{{trial.explanation}}
+            Correct! {{emoji(127881)}} 
+            <!-- 128076 -  okay symbol  -->
+            The comment should be rejected because <b>{{trial.explanation}}</b>.
             <button @click="$magpie.saveAndNextScreen()">Ok</button>
           </p>
           <!-- If the answer was incorrect provide an explanation why -->
           <p v-else>
-            Incorrect
-            The comment should be rejected because{{trial.explanation}}.
+            Incorrect... {{emoji(128579)}}
+            The comment should be rejected because <b>{{trial.explanation}}</b>.
             <button @click="$magpie.saveAndNextScreen()">Ok</button>
           </p>
           </div>
@@ -83,7 +82,6 @@
 </template>
 <script>
 
-// some questions will be shown the toxicity score, others not
 
 export default {
   name: 'TrialScreen',
@@ -128,6 +126,10 @@ export default {
       type: String,
       required: true
     },
+    question: {
+      type: String,
+      required: false
+    }
   },
   methods: {
     emoji(codePoint) {
@@ -172,15 +174,24 @@ export default {
 .hintstext {
     font-family: "Open Sans", sans-serif, Helvetica, Arial;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 35px;
     font-weight: 300;
     text-align: left;
     padding: 30px;
     color: #373434;
 }
 
+.feedbacktext {
+    font-family: "Open Sans", sans-serif, Helvetica, Arial;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 300;
+    text-align: left;
+    padding: 20px;
+    color: #373434;
+}
 .comprehension {
-  height:290px; /* or whatever width you want. */
+  height:400px; /* or whatever width you want. */
   max-height:350px; /* or whatever width you want. */
   margin-bottom:20px;
   margin-top:20px;

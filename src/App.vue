@@ -3,54 +3,53 @@
 
   <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Instructions  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
 
-    <!-- sensitive content warning -->
+    <!--------------------------------------------------- sensitive content warning ---------------------------------------------------->
     <InstructionScreen>
       <div class="instructionstext">
         <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
         <br>  
-        The following experiment contains words that can be perceived as offensive or triggering by some. Although the amount of such words has been kept to a minimum necessary for the task, please only continue participating if you are not upset by profanity, insults or controversial statements.
+        The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
       </div>
     </InstructionScreen>
 
-    <!-- describe the task -->
+    <!----------------------------------------------------- description of task -- ---------------------------------------------------->
     <InstructionScreen :title="'Instructions'">
         <div class="instructionstext">
           <p>
-            It's easy to be mean on the internet. Today you will take the role of a <b>moderator</b> and try to keep online conversations civilized, nice and with no mean comments.
+            It's easy to be mean on the internet. Today you will take the role of a <b>moderator</b> and try to keep online conversations civilized, nice, and with no mean comments.
           </p>
 
           <p> 
             Your task is to read real comments from online conversations on platforms like twitter, reddit, or wikipedia talk, and decide if they should be published online (<b>APPROVE</b>), or deleted (<b>REJECT</b>).
           </p>  
-          <p> 
-            To help you, an AI will <i>sometimes</i> show you how likely it is that a comment is <b>toxic</b>. Use this score, but don't rely too much on it.
+          <p v-if="group=='score'"> 
+            To help you, an AI assistant will show you how likely it is that a comment is <b>toxic</b>. You can use this score to help you make a decision, but don't rely too much on it.
           </p>
           <p> 
             One more thing: every now and then you will be asked to <b>answer a question</b> (<i>"{{comprehension_question}}"</i>) about the comment you just read, so always pay attention to the text! 
           </p>
         </div>
     </InstructionScreen>
-
- 
- <!-- You will also randomly receive a comprehension question refering to the content of the comment you just read, which you must answer without looking at the text again. -->
-        
+         
     <InstructionScreen :title="'Instructions'">
     <div contenteditable="true" class="instructionstext">
       <p>
-        Here are some examples of comments that are toxic and we want to reject:
+        Here are some categories of comments that are <b>toxic</b> and we want to reject:
         <ul>
-          <li>a hate comment</li>
-          <li>a comment that attacks someone, group or minority</li>
-          <li>a comment that dismisses how someone feels or what they experience, especially if it's with the intention of hurting someone.</li>
-          <li>a comment that doesn't make sense, or that is just trying to provoke a reaction </li>
-          <li>a sexist, racist comment, or one that contains harmful stereotypes</li>
+          <li>mean, hateful comments</li>
+          <li>sexist, racist, ableist comments</li>
+          <li>comments that contain harmful stereotypes</li>
+          <li>comments that attack a person or a minority group</li>
+          <li>comments that threaten someone</li>
+          <li>comments that want to hurt someone by mocking how they feel or what they experienced.</li>
+          <li>comments that don't make sense, or that is just trying to provoke a reaction (trolling) </li>
         </ul>
       </p>
     
       Note: A comment can contain <b>bad words</b> (profanity), and not be considered toxic. 
       
       <p>
-        Let's continue to a short training phase, to properly understand the task!
+        Let's continue to a short training phase, to properly understand what you have to do!
       </p>
     </div>
     </InstructionScreen>
@@ -61,19 +60,19 @@
         <p>
 			  Now you will read a series of practice questions. Read the instructions and the feedback carefully, in order to understand the task. 
         <br>
-        When you are ready, click the button to <b>start the practice session</b>!
+        When you are ready, click the "NEXT" button to <b>start the practice session</b>!
 			  </p>
       </div>
 		</InstructionScreen>
     
 
-    <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Training  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
+    <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Training  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
 
     <!-- Practice trials -->
     <template v-for="(trial, i) of practice_trials">
       <!-- Provide the plain text for the participant to read before the task -->
 
-       <TrialScreen
+       <!-- <TrialScreen
         :trial="trial"
         :key="'training-' + i"
         :trialType="'training'"
@@ -84,9 +83,41 @@
         :instructions="'Read the text below.'"
         :task="false"
         :group=group
+      /> -->
+
+      <!-- The task, where the participant can make a decision  -->
+      <TrialScreen v-if="group==='score'"
+        :trial="trial"
+        :key="'training-' + i"
+        :trialType="'training'"
+        :trialnumber="i"
+        :progress="i / practice_trials.length"
+        :options="['Approve', 'Reject']"
+        :text="trial.text"
+        :instructions="'Notice the TOXICITY SCORE. Reject the comment if you think it is toxic, approve it otherwise.'"
+        :question="' '"
+        :task="true"
+        :group=group
+      />
+
+      <TrialScreen v-else
+        :trial="trial"
+        :key="'training-' + i"
+        :trialType="'training'"
+        :trialnumber="i"
+        :progress="i / practice_trials.length"
+        :options="['Approve', 'Reject']"
+        :text="trial.text"
+        :instructions="'Reject the comment if you think it is toxic, approve it otherwise.'"
+        :question="'Moderate the comment:'"
+        :task="true"
+        :group=group
       />
       
-      <!-- Comprehension question is provided with a higher probability than in the experiment phase -->
+          
+      <!--------------------------------------------------- comprehension question  ---------------------------------------------------->
+
+      <!-- comprehension question is provided with a higher probability than in the experiment phase -->
       <TrialScreen v-if="Math.random() < 0.8"
         :trial="trial"
         :key="'training-' + i"
@@ -95,29 +126,15 @@
         :progress="i / practice_trials.length"
         :options="['Yes', 'No']"
         :text=comprehension_question
-        :instructions="'Answer the question below based on the text you previously read.'"
+        :instructions="'Answer the question below based on the comment you read before.'"
         :task="false"
         :comprehension="true"
         :group=group
       />
-
-      <!-- The task, where the participant can make a decision  -->
-      <TrialScreen
-        :trial="trial"
-        :key="'training-' + i"
-        :trialType="'training'"
-        :trialnumber="i"
-        :progress="i / practice_trials.length"
-        :options="['Approve', 'Reject']"
-        :text="trial.text"
-        :instructions="'Notice the TOXICITY SCORE. Approve or reject the comment.'"
-        :task="true"
-        :group=group
-      />
     </template>
+      
 
-
-    <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Experiment  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
+    <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Experiment  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
 
     <!-- The experiment phase  -->
     <Screen :title="'Experiment'">
@@ -133,7 +150,7 @@
   <!-- Trials -->
     <template v-for="(trial, i) of main_trials" >
       <!-- Provide the plain text for the participant to read before the task -->     
-     <TrialScreen
+     <!-- <TrialScreen
         :trial="trial"
         :key="'experiment-' + i"
         :trial-type="'experiment'"
@@ -143,10 +160,41 @@
         :text="trial.text"
         :task="false"
         :group=group
-      />
+      /> -->
 
       
-      <!-- Comprehension question is provided with a higher probability than in the experiment phase -->
+      
+      <!-- The task, where the participant can make a decision  -->
+      <TrialScreen
+        :trial="trial"
+        :key="'experiment-' + i"
+        :trial-type="'experiment'"
+        :trialnumber="i"
+        :progress="i/main_trials.length"
+        :options="['Approve', 'Reject']"
+        :text="trial.text"
+        :task="true"
+        :question="emoji(128718)"
+        :group=group
+      />
+
+      <!-- <TrialScreen v-if="group==='score'"
+        :trial="trial"
+        :key="'experiment-' + i"
+        :trial-type="'experiment'"
+        :trialnumber="i"
+        :progress="i/main_trials.length"
+        :options="['Yes', 'No']"
+        :question="'Do you agree with the score?'"
+        :text="trial.text"
+        :task="true"
+        :group=group
+      /> -->
+
+    </template>
+    
+
+<!-- Comprehension question is provided with a higher probability than in the experiment phase -->
       <TrialScreen v-if="Math.random() < 0.2"
         :trial="trial"
         :key="'experiment-' + i"
@@ -160,20 +208,6 @@
         :group=group
       />
 
-      <!-- The task, where the participant can make a decision  -->
-      <TrialScreen
-        :trial="trial"
-        :key="'experiment-' + i"
-        :trial-type="'experiment'"
-        :trialnumber="i"
-        :progress="i/main_trials.length"
-        :options="['Approve', 'Reject']"
-        :text="trial.text"
-        :task="true"
-        :group=group
-      />
-    </template>
-
     <PostTestScreen />
 
     <DebugResultsScreen />
@@ -184,13 +218,12 @@
 <script>
 // Load data from csv files as javascript arrays with objects
 import practice from '../trials/training.csv';
-import main from '../trials/main.csv';
+import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
-const practice_trials = _.sampleSize(_.shuffle(practice), 3);
+const practice_trials = _.sampleSize(_.shuffle(practice), 1);
 const main_trials = _.sampleSize(_.shuffle(main), 10);
 // whether the participant will be shown the toxicity score or not
-// const condition = Math.random() < 0.5 ? score : no_score;
 const group = _.sample(['score', 'no_score']);
 const comprehension_question = "Does the comment reference a group that is considered vulnerable, disadvantaged, or often discriminated against?";
 

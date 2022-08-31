@@ -1,0 +1,200 @@
+id;text;annotator_1;annotator_2;toxicity_score;profanity_score;contains_profanity;category;correct_response;comprehension_vulnerable;comprehension_insult
+0;He's a nightmare for the environment and climate change;Approve;Approve;41,52;13,68;n;not_toxic;Approve;n;n
+1; Delete lawyer, hit a hobby, get a gym?;Approve;Approve;36,94;11,91;n;not_toxic;Approve;n;n
+2;"Sure, PM me if you're single. Why the heck not? It would be a pretty funny ""how we met"" story";Approve;Approve;31,24;43,65;n;not_toxic;Approve;n;n
+3; This is hilarious and sad.;Approve;Approve;29,07;8,04;n;not_toxic;Approve;n;n
+4;Marshmallows being disgusting is entirely a point of taste.  I happen to love them;Approve;Approve;28,97;27,59;n;not_toxic;Approve;n;n
+5; Quick! We need a giant spliff!;Approve;Approve;27,05;7,96;n;not_toxic;Approve;n;n
+6; At no time have I engaged in a personal attack, though your threats here could certainly be construed as one.  In addition, your recent vandalism and edit warring in the Fred Singer article violates those mentioned policies. If you continue to ignore policy and abuse your administrator status, I will seek arbitration.  ;Approve;Approve;27,13;11,5;n;not_toxic;Approve;n;n
+7; Then invest that money into one hell of a lemonade stand, hire somebody to oversee production, and parlay it into a national chain;Approve;Approve;23,1;14,07;n;not_toxic;Approve;n;n
+8; I'm not sexist, but I cannot picture Thor being anything else then the character HE is now.;Approve;Reject;20,3;14,06;n;not_toxic;Approve;n;n
+9;It seems to me lots of well-educated Muslims get hired and get jobs in Europe, the U.S.A. and in Canada.;Approve;Approve;20,08;10,83;n;not_toxic;Approve;y;n
+10; Could buy some pop tarts, too;Approve;Approve;15,86;16,92;n;not_toxic;Approve;n;n
+11;So basically we should all be eating mushrooms.;Approve;Approve;11,28;3,72;n;not_toxic;Approve;n;n
+12;Honestly, who would pester someone that they don't know well enough to know if they have an alcohol problem to drink? This situation has never come up for me ever. ;Approve;Approve;14,87;2,87;n;not_toxic;Approve;n;n
+13; too many clothes to choose from;Approve;Approve;13,3;3,22;n;not_toxic;Approve;n;n
+14; You should be able to save from here;Approve;Approve;9,17;23,34;n;not_toxic;Approve;n;n
+15;Let's just agree to disagree in the name of queer unity and nonviolence.;Approve;Approve;9,49;4,03;n;not_toxic;Approve;y;n
+16;FYI this author is extremely conservative/right-wing...;Approve;Approve;7,93;2,68;n;not_toxic;Approve;n;n
+17;In what world does marshmallows melt faster then cream? I work in a cafe and we only serve whipped cream on cold things;Approve;Approve;6,93;8,48;n;not_toxic;Approve;n;n
+18;Actually, I explained nothing.  I asked YOU to think for YOURSELF and answer a question... ;Approve;Approve;5,02;2,56;n;not_toxic;Approve;n;n
+19; Seconding this. Trying to cope with this on your own can cause problems. It's okay to feel overwhelmed and deeply saddened, but getting professional help should be the next step.;Approve;Approve;5,77;1,5;n;not_toxic;Approve;n;n
+20;Do you think if there are more men in education i.e teaching , there would be increase in quality of education in our country?;Approve;Approve;5,57;1,78;n;not_toxic;Approve;n;n
+21; This was the late 90's so maybe the view had shifted a bit;Approve;Approve;4,89;6,94;n;not_toxic;Approve;n;n
+22;There are a lot more reasons for someone not to drink other than alcoholism, and plenty of them are private or personal choices;Approve;Approve;4,78;9,08;n;not_toxic;Approve;n;n
+23;Yes unpaid internships are exploitative in nature, people should be paid at lest minimum wage to enable them to sustain themselves;Approve;Approve;4,61;11;n;not_toxic;Approve;n;n
+24; After a year since I started the anime, I finally caught up with the manga. What will I do with myself now.;Approve;Approve;4,2;3,18;n;not_toxic;Approve;n;n
+25;Ok my specific example was an instance where a party needed more emotional support/attention than theyr partner was giving. I wasn't assuming a greedy motive, but I guess if you want to make my example that then sure.;Approve;Approve;4,23;2,24;n;not_toxic;Approve;n;n
+26;  Unrelated to Highlander.  I also prefer Fletch Lives over the first for same reason as GB 2.  Funnier, bottom line.;Approve;Approve;3,93;3,87;n;not_toxic;Approve;n;n
+27;Can you give us some examples of the food?;Approve;Approve;2,17;3;n;not_toxic;Approve;n;n
+28;How do you judge what is considered emotional or physical abuse?;Approve;Approve;3,69;1,92;n;not_toxic;Approve;n;n
+29;I'm sure it's not only me, but I feel any time I start to collect enough money to feel safe, life finds a way to take it back;Approve;Approve;2,86;6,48;n;not_toxic;Approve;n;n
+30; My hometown desperately needs some entertainment for the younger population that isnt movies/bowling/after school sports.;Approve;Approve;3,6;1,72;n;not_toxic;Approve;n;n
+31;Wow, what a great ideal. All we need to do now to start planting those money trees and everything will be okay.;Approve;Approve;2,86;4,25;n;not_toxic;Approve;n;n
+32;Do you view all addiction as a choice?;Approve;Approve;2,76;1,54;n;not_toxic;Approve;n;n
+33;Happy days are here again.;Approve;Approve;2,33;1,96;n;not_toxic;Approve;n;n
+34;Sadly, what has to matter for the justice system is what can be proven.;Approve;Approve;2,41;1,28;n;not_toxic;Approve;n;n
+35;" Nicki explains the complexities of catwalk modelling: ""You have to place one foot in front of the other"". #MKR";Approve;Approve;2,33;3,94;n;not_toxic;Approve;n;n
+36;I'd like to see this scientific research, I'm rather sceptical;Approve;Approve;2,29;9,98;n;not_toxic;Approve;n;n
+37;People who live healthy lives live longer, consume more in their life, consume more healthcare and still die of expensive conditions at end of life and need family and financial assistance;Approve;Approve;2,29;7,56;n;not_toxic;Approve;n;n
+38;"The PM said he had a plan; he delivered: quelle surprise!";Approve;Approve;2,19;1,44;n;not_toxic;Approve;n;n
+39;Some people need to create and open source Uber-like app. Hopefully it will catch on and we'll see how much the people who run Uber really like the 'sharing' economy.;Approve;Approve;1,97;0,67;n;not_toxic;Approve;n;n
+40;Well, on a personal level, my family has a history of heart disease but no history of liver problems. ;Approve;Approve;1,65;2,76;n;not_toxic;Approve;n;n
+41; Awesome series, hope it continues. Needs a better name IMO;Approve;Approve;1,62;1,17;n;not_toxic;Approve;n;n
+42;Unpaid internships are basically volunteering and so would be almost impossible to distinguish between the two in a court of law.;Approve;Approve;1,19;1,24;n;not_toxic;Approve;n;n
+43;I feel like my basic view was explained in the initial description? ;Approve;Approve;1,11;1,31;n;not_toxic;Approve;n;n
+44;Thank you, Lysiane. A much needed explanation.;Approve;Approve;0,57;1,14;n;not_toxic;Approve;n;n
+45;"Also that kind of ""nice guy"" behavior is really gross, being nice and friendly to someone just because you want to fuck them. Instead of having these ulterior motives, just be honest and get it over with.";Approve;Approve;77,4;93,69;y;toxic;Approve;n;n
+46;Fucking quality content. Really great to hear some eloquent discussion on this topic. Can't say I was able to contextualise all the American sports references but was interesting nonetheless. ;Approve;Approve;70,08;96,01;y;toxic;Approve;n;n
+47;Just delete his posts and ignore him - don't be tendentious and ad homin - are all part of the wiki lawyers bullshit bible.;Approve;Approve;81,29;94,21;y;toxic;Approve;n;n
+48;I mean, I get all the vaccinations I can (I literally got two more yesterday) and I *do* have ADHD, but I'd rather have that than get a preventable disease that could fuckin *KILL ME* and harm the people I love.;Approve;Approve;58,11;94,63;y;not_toxic;Approve;n;n
+49;well, fuck. I googled it to get you an answer and it was more than one country this has happened in. I think this particular case is the Serbian one though.;Approve;Approve;73,82;94,33;y;toxic;Approve;n;n
+50;Damn. This has to be a record. That was a ridiculous game. Haha. ;Approve;Approve;70,08;93,69;y;toxic;Approve;n;n
+51;Right on man I appreciate it. I don't really care if I am blocked. I got 6 neighbors with wifi. That guy is really being a dick though!! Humility man!! That's whats important!! I'll see you around! Cheers!! ;Approve;Approve;58,19;89,69;y;not_toxic;Approve;n;n
+52;Broke ass but at least we get to live.;Approve;Approve;83,02;91,13;y;toxic;Approve;n;n
+53;Fuck. I started watching it even though you warned me. I stopped watching after the first few seconds because it already spoiled too much for me. I'm trying so hard not to watch anything but the release date is ages away :(;Approve;Approve;73,45;94,78;y;toxic;Approve;n;n
+54;Trump has the power to make that happen. Do you see him fucking enforcing the law against these bad cops and jailers who raped and drugged children on his fucking watch? No, he's picking fights with fucking LeBron James on Twitter.;Approve;Approve;74,65;90,67;y;toxic;Approve;n;n
+55;"I know John F. Kennedy, but everytime I read ""JFK"", my mind goes to ""Jesus Fucking Khrist"". It's not even right, I don't know why it happens.";Approve;Approve;65,02;95,58;y;toxic;Approve;n;n
+56;Too many people belive that crap.;Approve;Approve;79,7;90,67;y;toxic;Approve;n;n
+57;I guess the old saying holds true. In the land of fools the biggest fool is king.;Approve;Approve;73,03;62,22;n;toxic;Approve;n;n
+58;"Ok, ya I did that twice in the last few days, it takes more than someone calling me a ""faggot ass queer"" to upset me. The best would be if users gave 1 warning to the vandals and then they were blocked right away. Thanks for the help!";Approve;Approve;61,83;89,09;y;toxic;Approve;y;n
+59;I really couldn't give a rat's arse.;Approve;Approve;66,63;91,13;y;toxic;Approve;n;n
+60;I think you'd have to step in front of me, trap me where I am, and aggressively make out with someone while making eye contact with me for me to feel like you're pushing your sexuality in my face. Otherwise, you're just a person doing person shit.;Approve;Approve;87,64;92,11;y;toxic;Approve;n;n
+61;Ok fuck this judge. I read another thread about this case and all the comments were anecdotal stories about slutty opportunistic tween girls. It's just real fucking simple you don't  have sex with them and you don't pay for sex with them. ;Approve;Approve;89,6;92,68;y;toxic;Approve;y;n
+62;OK OK. I am sorry for behaving like a idiot. I undertake  that I will not indulge in any sort of behiovour that is unacceptable for wikipedia's members. Hope you will forgive me.;Approve;Approve;45,2;69,38;y;not_toxic;Approve;n;n
+63;Just an opinion Wow, after reading all this crap it is clear to me that Sea Shepherd is a violent, racist and illegal criminal organisation that should be dismantled as soon as possible. My heart goes out to the Japanese victims of these bastards. ;Approve;Approve;82,02;82,43;n;toxic;Approve;n;n
+64;This is absolute rubbish, I have been discussing these edits at length on the discussion page, please read it before making these ridiculous accusations! ;Approve;Approve;60,85;62,21;n;toxic;Approve;n;n
+65;HATE FOOD EATING CONTEST  THIS IS THE MOST DISGUSTING FORM OF PASSE TIME EVER.  IT TURN ME OFF;Approve;Approve;55,36;62,14;n;not_toxic;Approve;n;n
+66;Make up your mind TABTABTAB Look, you either want me to delete it or you don't, make up your god damn mind. You said you wanted me to delete it, didn't you? ;Approve;Approve;59,59;93,55;y;not_toxic;Approve;n;n
+67;"This is more reasonable than ""being gay is a sin"" but still pretty lame.";Approve;Approve;63,58;59,99;n;toxic;Approve;y;n
+68;in gay porn magazines;Approve;Approve;41,52;82,47;n;not_toxic;Approve;y;n
+69;Hey , mind your own friggin' business, would ya?;Approve;Approve;49,45;87,44;y;not_toxic;Approve;n;n
+70;"You cant have loyal happy workers if you treat and pay em like shit. They will just leave.  They will only leave if they have somewhere better to go and the resources to get there. And it also assumes that you need ""workers"" at all. Robots don't complain.";Approve;Approve;62,37;88,68;y;toxic;Approve;n;n
+71;God this is so cursed. Thank you for the laugh.;Approve;Approve;46,29;84,22;n;not_toxic;Approve;n;n
+72;If you think I am an idiot, it is okay, I hear this a lot.;Approve;Approve;58,11;86,12;y;not_toxic;Approve;n;n
+73;Porn is a beautiful thing with beautiful people. I support sex workers 100%.;Approve;Approve;41,52;75,32;n;not_toxic;Approve;y;n
+74;I've never ever met someone gay who who even came close to pushing his sexuality in my face....;Approve;Approve;55,36;50,9;n;not_toxic;Approve;y;n
+75;"It's not a sin to be gay in Catholicism. It's a sin to have sex out of wedlock and a sin to have sex when it's not for the purpose of procreation. You can be gay in Catholicism, so long as you don't have sex or to have sexual thoughts; the latter applies to straight people also. ";Approve;Approve;44,81;34,15;n;not_toxic;Approve;y;n
+76;Hope to see more of this format and I hope more owners step forward. ALL GLORY TO ALPHADRAFT!;Approve;Approve;3,41;5,09;n;not_toxic;Approve;n;n
+77;"I noticed that most posts here don't have TL;DR so thanks for that!";Approve;Approve;4,17;3,11;n;not_toxic;Approve;n;n
+78;This article SUCKS. It may be poorly written, poorly formatted, or full of pointless information that no one cares about, and probably all of the above.  If it can be rewritten into something less horrible, please, for the love of God, do so.;Approve;Approve;79,7;80,28;n;toxic;Approve;n;n
+79;"Maybe the people here have been too polite to tell you, but you are a complete fucking crank.  Claiming that you have Asperger syndrome without an official diagnosis is insulting to those who actually have the condition. Your ""Aspie-Quiz"" is total bullshit. I think you're 100% moron.";Reject;Reject;88,91;95,46;y;toxic;Reject;n;y
+80;STOP EDITING DUMBASS! ;Reject;Reject;83,93;86,23;y;toxic;Reject;n;y
+81;CRAPPY nick cage movies and obsesive compulsive wikipedia editors ur a douch get a life;Reject;Reject;78,17;88,95;y;toxic;Reject;n;y
+82;hamburger radio is a fucing F@ggot;Reject;Reject;88,91;92,64;y;toxic;Reject;y;y
+83;You call put the link to the official website of a Firefox addon spam.  I mean only a retard (and maby not even a retard) would be so stupid.;Reject;Reject;81,34;78,36;y;toxic;Reject;n;y
+84;jezz - you people are really starting to look stupid now;Reject;Reject;87,64;76,99;y;toxic;Reject;n;y
+85;Sex sex sex sex Sex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sexSex sex sex sex;Reject;Approve;46,29;80,53;n;not_toxic;Reject;n;n
+86;Mr. Stemonitis, you are a stupid botanist, who does not know the taxonomy of dipterous.  For that, you must leave the corrections made in the definition of the superfamille.;Reject;Reject;76,28;56,23;y;toxic;Reject;n;y
+87;Hey, a girl's gotta eat, even if she eats cocks all day at work.;Reject;Reject;78,52;90,51;y;toxic;Reject;y;n
+88;Now let's see who's gonna start crying like a little girl because I said this so I could laugh my ass off at them. ;Reject;Reject;70,08;91,13;y;toxic;Reject;n;n
+89;It's not a song dumbass -___- its a MIXTAPE.;Reject;Reject;78,17;85,88;y;toxic;Reject;n;y
+90;You are a maggot, that's all I have to say.  ;Reject;Reject;69,56;74,09;n;toxic;Reject;n;y
+91;I ghLOOOOOOVE GGAAYY PPEEooPPLLEE !!!!!!!! CUZ IM GAY;Reject;Approve;50,26;69,38;n;not_toxic;Reject;y;n
+92;Who the fuck do you think you are? I ask because you are not an admin. Do not delete comments from a discussion page, regardless of the contents of the comments, without first issuing a warning. And before you delete this comment, or alert an admin, please cite the rule that disallows the casual use of the word fuck on Wikipedia. Thanks.;Approve;Approve;87,42;93,69;y;toxic;Approve;n;n
+93;Important Note: I would also like to point out that I hate you aswell and  hope you die. Best regards. ;Reject;Reject;75,1;50,84;n;toxic;Reject;n;n
+94;I know he's an idiot I think he might of been held back a year in school then again Texans aren't really smart or average for that matter.;Reject;Reject;82,7;78,36;y;toxic;Reject;n;n
+95;Okay retard whatever you say have fun being a loser!  ;Reject;Reject;81,29;69,24;y;toxic;Reject;n;y
+96;A training course to stop shootings...? So, now we will have highly trained school shooters...? Great fucking logic dude.;Reject;Reject;68,87;92,18;y;toxic;Reject;n;n
+97;a sincere question Why do you do what you do? slander, harassment and abuse of editors. And you are a mindless dumbass, Geogre. Also a liar. Actually the blatant slanderous crap you all throw out all over the internet about me and so many others is kind of against the law. ;Reject;Reject;67,1;77,64;y;toxic;Reject;n;y
+98;Is this place run by girls????  That is the most ridiculous thing that I have ever heard!  Why would anybody in their right mind be offended by Biggus Dickus?  That is so gay!  ;Reject;Reject;81,34;80,53;n;toxic;Reject;y;n
+99;it's not cheap. it's in fact the most important thing: having heart in a world full of mindlessly negative losers. it's certainly better than taking it up the ass and pretending that's ok, which is what a cynic does;Reject;Reject;73,45;87,61;y;toxic;Reject;y;n
+100;Please stop being a retard @ satellite temp record ;Reject;Reject;68,1;77,42;y;toxic;Reject;n;y
+101;Murder anyone preaching christianity, Judaism, or islam.;Reject;Reject;84,57;43,47;n;toxic;Reject;y;n
+102;BOO HOO TELL EVERYONE WHAT I DID - CANT FIGHT YOUR OWN BATTLES!!! PATHETIC BABY!!;Reject;Reject;76,63;47,13;n;toxic;Reject;n;y
+103;It is called pro choice not pro abortion dumb dumb. No one should be for abortion unless I could go back in time and convince your mom to go ahead and make that difficult decision. ;Reject;Reject;72,58;92,68;y;toxic;Reject;n;y
+104;Ahh the good ol DNC, if only any of us could trust a word that comes out of this groups mouth. You fucks made us have Trump as president!  You could have told Hilary to fuck off and taken the more popular and actually electable candidate but no.  You had to have your lizard devil, and now we have Trump.  Thanks.;Reject;Reject;75,1;91,13;y;toxic;Reject;n;y
+105;Get a life and quit stalking me. You admin clowns need to move out of your parents basements and get some real life experience in human interaction.;Reject;Reject;59,59;27,18;n;not_toxic;Reject;n;y
+106;"A Pair of Twins - You write ""a pair of twins"". Twins are always pairs. You people are ridiculous. No wonder school boards spit at you. LMAO";Reject;Reject;59,59;54,78;n;not_toxic;Reject;n;y
+107;did i hurt your feelings? its okay you can ban me, i will create a new account and sign in from a different ip. i must have hurt your feelings pretty bad. douche bag.;Reject;Reject;67,1;82,14;y;toxic;Reject;n;y
+108;Dude, your retarded. Get some help.;Reject;Reject;83,02;69,31;y;toxic;Reject;n;y
+109;Hey GWERNOL, yeah you're a schmuck face.  That's what I thought.  Oh, also, I would like a sandwich.  Thanks.  With cheese.;Reject;Reject;72,58;73,96;y;toxic;Reject;n;y
+110;Are you really that stupid? Do you know the difference between these two words: unfair and allege? May I suggest going back to nursery school and learn basic English, again.;Reject;Reject;82,7;56,44;y;toxic;Reject;n;y
+111;would you do the world a favor and die? plzkthx;Reject;Reject;81,29;55,98;n;toxic;Reject;n;n
+112;guess what your retarded;Reject;Reject;78,02;68,57;y;toxic;Reject;n;y
+113;YOU ARE A MISCHIEVIOUS PUBIC HAIR;Reject;Reject;76,63;58,54;n;toxic;Reject;n;y
+114;What exactly is your problem?  Go play games with somebody else little boy.  Put down your video game controller and get out of your mommies basement and get a life assclown.  ;Reject;Reject;75,94;75,32;y;toxic;Reject;n;y
+115;You seem to be slightly retarded, so I'll explain it slowly for you.  It's only vandalism if it has malicious, nonsensical intent.  You can't prove that, so please, quit harassing me.  ;Reject;Reject;65,02;70,46;y;toxic;Reject;n;y
+116;No, you were trying to sound cool but ended up sounding like a retard.;Reject;Reject;74,2;69,22;y;toxic;Reject;n;y
+117;Go worship your jewish god, sub-human.;Reject;Reject;83,02;50,9;n;toxic;Reject;y;y
+118;Lick me are u horny?;Reject;Reject;72,12;78,36;n;toxic;Reject;n;n
+119;let me tell you little man, a personal attack will be when I find you and beat the hell out of you.  Be very glad I don't know where you live or where I can find you.;Reject;Reject;49,45;61,6;n;not_toxic;Reject;n;n
+120;And may you rot in hell my good sir for no one is good enough for heaven, not even you delusional folks. ;Reject;Reject;75,7;61,82;n;toxic;Reject;n;n
+121;Awwwwwww, did I hit a little too close to home with the faggot comment? Oh well. Not harrassment if its true, yo! By the way, you are still completely ignoring the topic at hand. but that is to be expected from someone like you, I guess.;Reject;Reject;70,08;80,53;y;toxic;Reject;y;n
+122;You are clearly a sock puppet.  Dance for the Puppet master. Dance. Dance.;Reject;Reject;51,24;19,27;n;not_toxic;Reject;n;y
+123;I'm saying that anyone can claim to be transgender and then easily enter the bathroom they want to for whatever reason, moron. Don't put words in my mouth. It's sad how you're literally saying harassment and pedophilia is fine because it's related to trans rights. ;Reject;Reject;69,56;75,33;y;toxic;Reject;y;y
+124;She's a hoe, plain and simple. ;Reject;Reject;79,7;53,86;y;toxic;Reject;y;n
+125;Women's studies is dumb though, stop defending your degree?;Reject;Reject;73,03;43,96;n;toxic;Reject;n;n
+126;I know its not right to hit a woman but GOTDAYUM i would have beat the ever living hell out of her with whatever was on hand;Reject;Reject;70,08;46,02;y;toxic;Reject;y;n
+127;That is one of the dumbest things I've read on here. Congrats.;Approve;Reject;58,92;42,97;y;not_toxic;Approve;n;n
+128;The funny thing about this post is that people in this sub are too dumb  this has nothing to do with world politics   SMH people. ;Reject;Reject;69,56;43,47;y;toxic;Reject;n;y
+129;What exactly are you trying to say here? That it should be illegal for women to work? That you, Oh Holy Man, know what is best for and will satisfy every single woman without exception? Were you by any chance dropped on your head as a child or are you just so miserable that the notion of women enjoying their lives without any concern for what you consider to be propriety enrages you?;Reject;Reject;43,1;20,61;n;not_toxic;Reject;y;y
+130;Do you hate white people? Or do you just think that only white people can be bigots? Sounds like you have a problem with others not agreeing with you. There are treatments available for your problems. And I am really sorry your great great great grandma did all those awful things. People thought different back then. You can stop feeling guilty about it now.;Reject;Reject;43,62;16;n;not_toxic;Reject;n;n
+131;Zzzzzzzzzzzzzzzzzzzzzzz...fake media.....but not Fox, even though it has the most ill informed audience of all media.... love Daddy Trump.....his wife is hotzzzzzzzzz...I'm a zero but Trump makes me feel like a manzzzzzzzzzzzzzor a woman, but I'd never admit thatzzzzzzzzzzzzz....;Reject;Reject;39,16;26,05;n;not_toxic;Reject;n;n
+132;These Libtards who never served and have a rather bizarre understanding of the prupose of the military have some close allies in their righteous cause.  Rest assured, ISIS, China, Iran, Russia, Al Qaeda, Syria and North Korea are also opposed to Trump's transexual ban.;Reject;Reject;42,47;13,25;n;not_toxic;Reject;n;y
+133;I'm fine with gay people as long as they aren't gay around me.;Reject;Reject;50,43;42,81;n;not_toxic;Reject;y;n
+134;"Does ""cultural  appropriation"" mean the black musicians  can be prevented from playing Tchaikovsky or Bach? or  an Asian girl who wants to be a ballerina can be told to go away?  Or natives will accept that they  simply have to give up pizza and Chinese food? No of course not: that would be racist.";Approve;Reject;39,23;9,67;n;not_toxic;Approve;y;n
+135;Charles... not everyone looks to the government to pay all of their bills and supply them with every one of life's little pleasures... pay their power/rent/daycare/buy their food/day care/health care. They also don't value their own lives based upon what the government thinks its value is. When rural people fall on hard times they don't start crying for another government program to take care of them... they look at each other and they look first at themselves first.;Reject;Approve;8,56;1,18;n;not_toxic;Reject;y;n
+136;Perhaps if your science comes from either the Middle Ages or from FOX News as both seem to be of the same relevance. I'm no dummy, neither am I a sheep. I'm not implying you are either one but you do seem to have a stick in your eye when it comes to anything having to do with gay men.;Reject;Approve;47,25;31,21;n;not_toxic;Reject;y;y
+137;Why do you get so offended when someone says you act white? They're acknowledging the fact that you're smart. Just accept the compliment.;Reject;Reject;26,59;12,79;n;not_toxic;Reject;y;n
+138;Don't shoot officers, I'm white!;Reject;Approve;44,51;16,26;n;not_toxic;Reject;n;n
+139;I can no longer take wise people that believe Donald Trump is unqualified to be president because of his private conversation about a woman that he had eleven years ago. These people are sheltered, isolated, secluded, who obviously have never been out of the house. If they decide to come out of their womb and visit society, they would discover that men say rough, crude things, especially in groups (real men, that is);Reject;Reject;26,82;7,97;n;not_toxic;Reject;n;y
+140;If a guy thinks he is a dog, should we let him case cars and pee on fire hydrants.  Maybe his employer should be required to make reasonable accommodations and let him bark at people.  Of course not, the guy would be put in API.  So if you think you are an animal you go to the funny farm, if you think you are the opposite sex the world need to accommodate you?;Reject;Reject;50,23;29,9;n;not_toxic;Reject;y;n
+141;You're Asian, so you must be good at math, right?;Reject;Reject;31,67;16,31;n;not_toxic;Reject;y;n
+142;What if Islam is like kryptonite to the otherwise workable idea of a harmonious, multicultural society?;Reject;Reject;22,98;18,66;n;not_toxic;Reject;y;n
+143;trendy...indignation - sounds like insensitive words from someone that probably has been entitled in their life and doesn't know or appreciate what it might be like to live being oppressed, discriminated against, or subjugated. You do yourself and your position a dis-service by being trite and dismissive.;Reject;Approve;21,63;3,96;n;not_toxic;Reject;y;n
+144;"Dude, your heart's in the right place, but your brain may be in neutral.  You don't need to ""neutralize"" a ""compliant"" enemy combatant.  That's why they're called ""compliant""  ";Reject;Approve;15,33;7,81;n;not_toxic;Reject;n;y
+145;The indigenous cultures your parents were so proud of were practicing cannibalism and never developed a modern society.  For your daughter's sake, please read some history!;Reject;Reject;25,45;9,68;n;not_toxic;Reject;y;n
+146;"I'm sick of hearing all this stuff about feminism. I'm a white male, does that make me rich? I'm not ""empowered"" just because I'm a guy. Do you know how many scholarships I can't apply for because I'm male?";Reject;Reject;34,39;15,81;n;not_toxic;Reject;n;n
+147;Going to Bed already? It only 3pm. Better take your Bottle and Blankie with you. Your mommy waiting for you.;Reject;Reject;34,39;11,82;n;not_toxic;Reject;n;y
+148;There are scholarships available solely for black men, black women, only women, Hispanic men and women, but if there was a scholarship that only a white man could apply for, I bet it would cause an uproar. Just sayin'. Is this fair in today's day and age? What did my generation do to oppress any specific group of people? Isn't it time for equality across the board?;Reject;Reject;29,76;6,99;n;not_toxic;Reject;y;n
+149;Alto Adige  I see you are trying to change the name again to the German point of view.  Jan, you really a pathethic nationalistic neo-nazi POS excuse for a human being.  With this move request, you prove it.  How insecure you must be.;Reject;Reject;59,34;10,27;n;not_toxic;Reject;n;y
+150;"All of the ""independent women"" I knew eventually settled down and got married. Your instinct will kick in soon.";Reject;Reject;26,59;6,89;n;not_toxic;Reject;y;n
+151;How can you be a Muslim and feminist at the same time?;Reject;Reject;36,21;7,97;n;not_toxic;Reject;y;n
+152;Images I find on Google are now available to the public to use. If you used your brain, you would know that no where, and I repeat NO WHERE can I see a visible copyright. ;Reject;Approve;35,12;12,3;n;not_toxic;Reject;n;y
+153;The reason why women get paid less than men is because they aren't assertive enough. If women would just demand better pay and refuse to work until they got it, they wouldn't have to keep complaining about the wage gap.;Reject;Reject;27,36;11,6;n;not_toxic;Reject;y;n
+154;Oh go ahead and revert it.  Go ahead and increase the block.  Obviously patrolling this site fills a very big void in your life.;Reject;Reject;28,92;14,31;n;not_toxic;Reject;n;n
+155;Every man that ever had a child has probably groped a woman, and that woman knew that groping was part of the process! If a woman says NO then a man must stop, but if a woman cries FOUL 20 years later, she probably has an ulterior motive that didn't exist at the actual time when she was groped. Lots of women use their goodies for advantage and if the advantage doesn't materialize, then they turn to revenge. Human Nature!;Reject;Reject;24,59;12,49;n;not_toxic;Reject;y;n
+156;"Not so sure women need to be socialized... being physically weaker (there are exceptions, of course!), so men have always been the hunters and defenders.  Even primate females want the strongest male, the best hunter, partly to protect them from all the other males.  So most women innately don't want men who are weaker and poorer than them thus, in various ways, they ""marry up"".";Reject;Reject;30,49;3,63;n;not_toxic;Reject;y;n
+157;No offense, but women ruined the navy and the military in general. Things were a lot better when it was just men on ships because that way, they could be real men;Reject;Reject;45,96;11;n;not_toxic;Reject;y;n
+158;"There should be exceptions for people who have actually had reassignment surgery. For people who simply say they ""feel like a woman"" or ""feel like a man"" forget it !!!";Reject;Reject;22,6;10,12;n;not_toxic;Reject;y;n
+159;Why can't they act like normal people? You don't have Asperger's. There's nothing wrong with you. You're just looking for attention/excuses.  If you'd just stop behaving so oddly, you wouldn't need to blame it on a disease.;Reject;Reject;20,96;6,31;n;not_toxic;Reject;y;n
+160;I had a chude moment-I didn't know if it was a chick or a dude.;Reject;Reject;16,9;17,69;n;not_toxic;Reject;y;n
+161;the Nijab is not just a symbol of the  oppression of women. it is actual oppression. also the way we identify ourselves in Canada is by showing our face, religion has nothing to do with it;Reject;Reject;19,79;14,05;n;not_toxic;Reject;y;n
+162;I find it rather funny when girls who wear rather revealing clothing complain about being touched inappropriately. It's like walking around with expensive jewelry and getting robbed, then complaining you got robbed. It's like don't advertise yourself if you don't want it to happen to you.;Reject;Reject;16,76;13,99;n;not_toxic;Reject;y;n
+163;Are you on your period or something?;Reject;Reject;21,04;6,24;n;not_toxic;Reject;n;n
+164;You can major in two things. They don't necessarily have to be related. For example, I majored in Chemistry and African Studies and they don't really have anything to do with each other except for AIDS.;Reject;Reject;6,33;15,01;n;not_toxic;Reject;n;n
+165;Not much of a man, are you?;Reject;Reject;17,76;8,84;n;not_toxic;Reject;n;y
+166;Saw two old guys hooking up tonight. CANNOT UNSEE;Reject;Reject;11,41;11,88;n;not_toxic;Reject;y;n
+167;Not saying he is innocent at all.  Here is the problem.  Any 2-3 people can conspire with any combination of females to frame, defame, and bring lawsuit upon anyone they wish that had prior contact over a span of years.  How would you be able to defend yourself even if you are innocent?  Beware.;Reject;Reject;18,55;2,59;n;not_toxic;Reject;n;n
+168;Oh great, we are getting a woman employee.  Now we have to make sure that our conversations are work-friendly;Reject;Reject;13,3;5,31;n;not_toxic;Reject;y;n
+169;Cool story, babe. Now make me a sandwich;Reject;Reject;17,17;6,6;n;not_toxic;Reject;n;n
+170;Wow Barbie actually has a lot to say.;Reject;Reject;8,53;3,57;n;not_toxic;Reject;n;y
+171;Bisexual is a term that gay guys in high school use when they want to hold hands with girls and feel like a normal person for a change.;Reject;Reject;35,45;4,32;n;not_toxic;Reject;y;n
+172;Wow, if only there was some place we could find such information....;Approve;Approve;2,03;1,71;n;not_toxic;Approve;n;n
+173;Take it as a compliment! It just means you're young and attractive, you'll be wishing for that attention in 20 years.;Reject;Reject;3,84;2,04;n;not_toxic;Reject;n;n
+174;How does A WOMAN get the idea to study computer science?;Reject;Reject;43,28;5,31;n;not_toxic;Reject;y;n
+175;Girls get all the validation in the world yet they have that gall to complain about patriarchy.;Reject;Reject;31,73;9,12;n;not_toxic;Reject;y;n
+176;First, you don't use the English language at anywhere near a native-speaker's level, so I suggest your user box is misleading. Secondly, you grasp of North American culture appears to me to be quite limited, so I suggest you stick to issues and ideas in youyr own small country.  ;Reject;Reject;35,5;10,09;n;not_toxic;Reject;n;n
+177;"The saddest part of this is not that Harper thinks we're all idiots; it's that it might just work.";Approve;Approve;71,38;64,39;;toxic;Approve;n;
+178;Any idiot can spend money, but it takes planning, priority setting and resolve to live within a budget. I'm still waiting for a politician and party with these traits. Don't worry, I won't hold my breath.;Approve;Approve;74,2;61,17;;toxic;Approve;n;
+179;So this has nothing to do with stupid immigration policies, corrupt politicians, culture of political correctness or Islam.;Approve;Approve;76,28;52,6;;toxic;Approve;y;
+180; I hope she kicks your ass out... I'm not sexist but ... No female is ever gonna tell me what to do... That includes my mom;Approve;Reject;86,36;91,13;;toxic;Approve;n;
+181;"Women need to stop being called ""girls,"" shit. Girls need reassurance not real men. I'm not sexist just practical and observant";Approve;Reject;76,63;93,28;;toxic;Approve;y;
+182;Today one of my students spoke loudly and openly about how it's unfair that women get shit for doing No Shave November. There is hope.;Approve;Approve;65,02;90,92;;toxic;Approve;y;
+183;Seriously? Where exactly do you suggest I put my tits, should I detach them when doing feminist things?;Approve;Approve;67,9;86,1;;toxic;Approve;y;
+184;Being a girl sucks. We have to deal with periods making us a bitch, shaving our legs on a daily basis, and worrying about what we eat.;Approve;Reject;89,6;95,48;;toxic;Approve;y;
+185;Apparently we don't like girls having fun and just want to see boobs;Approve;Approve;77,81;84,89;;toxic;Approve;n;
+186;I think I hate women: what should I do?;Approve;Approve;67,9;55,89;;toxic;Approve;y;
+187;Random girl in the liquor store parking lot:: Can I bum a cigarette? (after I gave it to her) Are you a chick or a dude? Me:: Um, I'm female. Girl:: Are you gay? Me:: Uhhhh... Girl:: You should've kept your hair long. DAMN GENDER CONSTRUCTS!;Approve;Approve;70,61;87,61;;toxic;Approve;y;
+188; There's a better answer to the question: the people that made the anime fucked up.;Approve;Approve;77,81;95,59;;toxic;Approve;n;
+189; I was thinking the same thing, and then I realised I don't care because I don't give a shit about her;Approve;Approve;69,56;94,56;;toxic;Approve;n;
+190;You're a dumb asshole... I'm no sexist btw cause I'd punch a woman to show that she's equal #equality;Reject;Reject;94,49;96,91;;toxic;Reject;y;
+191;And were lost, I told you this didn't take us anywhere. Fuuck you female drivers. no sexist bro;Reject;Reject;84,57;82,69;;toxic;Reject;y;
+192;look guy, every man has look at a woman's ass at one point or another I his life.;Reject;Reject;79,7;92,32;;toxic;Reject;n;
+193;"You never Googled ""financial abortion"" OR you are too dumb to comprehend otherwise you would NOT ask what you did. Which?";Reject;Reject;70,08;48,18;;toxic;Reject;n;
+194;I hate texting boring bitches;Reject;Reject;95,07;98,52;;toxic;Reject;n;
+195;Women will literally complain and whine about being complimented too much. How the fuck can they actually call themselves opressed?;Reject;Reject;65,57;93,69;;toxic;Reject;y;
+196;Man you are one ugly bitch. And that's a fact, Bedford;Reject;Reject;95,07;98,4;;toxic;Reject;n;
+197;Oh yeah, and when I said that no one would respond, I was obviously referring to my proposal to change the name of the article... I didn't think you were that stupid, but you obviously are.;Reject;Reject;68,1;62,22;;toxic;Reject;n;
+198;why can't you get yourself a girl? are you that ugly or are you that ugly and that awkward and that much of a failure?  ;Reject;Reject;75,94;49,87;;toxic;Reject;n;
