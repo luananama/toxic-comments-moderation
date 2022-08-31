@@ -19,5 +19,9 @@ module.exports = {
     lintStyleOnBuild: false,
     stylelint: {}
   },
-  publicPath: ''
+  // publicPath: ''
+  publicPath: 
+    process.env.NODE_ENV === 'production' && process.env.REPO_NAME
+    ? '/' + process.env.REPO_NAME + '/'
+    : '/'
 };

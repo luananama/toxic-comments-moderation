@@ -6,6 +6,7 @@
     :instructions="instructions"
     :task="task"
     :comprehension="comprehension"
+    :group="group"
     :feedbackTime="-1"
     question=""
     >
@@ -18,26 +19,26 @@
           </div>
 
         <div v-bind:class = "comprehension?'comprehension':'stimulus'">
-          <div class="text">
-            <p>
-              {{text}}
-            </p>
-          </div>
+          
           <div v-if="task===true" class="score">
           
             <p v-if="group==='score' || trialType ==='training'" > 
-            _______________________________________
+           
+            {{emoji(128226)}}  
+            This comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
             <br>
-            <br>
-
-            This comment is {{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic.
             </p>
+            
             <p v-else-if="group==='no_score'">
-              _________________________________________________________
-              <br>
-              <br>
-
+              {{emoji(128564)}}
               The AI doesn't have a score available for this comment...
+              <br>
+            </p>
+          </div>
+          
+          <div class="text">
+            <p>
+              {{text}}
             </p>
           </div>
         </div>
@@ -63,20 +64,20 @@
           <div class="instructionstext">
           <p v-if="$magpie.measurements.response === trial.correctResponse">
             Correct! The comment should be rejected because{{trial.explanation}}
-            <button @click="$magpie.nextScreen()">Ok</button>
+            <button @click="$magpie.saveAndNextScreen()">Ok</button>
           </p>
           <!-- If the answer was incorrect provide an explanation why -->
           <p v-else>
             Incorrect
             The comment should be rejected because{{trial.explanation}}.
-            <button @click="$magpie.nextScreen()">Ok</button>
+            <button @click="$magpie.saveAndNextScreen()">Ok</button>
           </p>
           </div>
         </template> 
         <!-- Skip feedback during experiment phase. Couldn't find a better way to do this -->
         <template v-else #feedback>
            
-          <Wait :time="1" @done= "$magpie.nextScreen()" />
+          <Wait :time="1" @done= "$magpie.saveAndNextScreen()" />
         </template>
     </ForcedChoiceScreen>
 </template>
@@ -123,14 +124,23 @@ export default {
       type: Boolean,
       required: false
     },
+    group: {
+      type: String,
+      required: true
+    },
   },
-  data() {
-    const group = _.sample(['score', 'no_score']);
-    
-    return {
-      group: group
+  methods: {
+    emoji(codePoint) {
+      return String.fromCodePoint(codePoint);
     }
   },
+  // data() {
+  //   const group = _.sample(['score', 'no_score']);
+    
+  //   return {
+  //     group: group
+  //   }
+  // },
 };
 
 </script>
@@ -191,10 +201,10 @@ export default {
 
 .score {
     font-family: "Open Sans", sans-serif, Helvetica, Arial;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    color: #6E7378;
+    color: #555454;
     text-align: left;
     padding: 30px;
 }
@@ -213,6 +223,19 @@ export default {
     justify-content: center;
     align-items: center;
     height: 250px;
+}
+
+/* to place text and score in two columns */
+#block1 {
+    float:left;
+}
+
+#block2
+{
+    float:right;
+    margin: 10px 20px;
+    padding: 20px;
+    width: 180px;
 }
 </style>
 
