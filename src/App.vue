@@ -178,7 +178,7 @@
         :group=group
       />
 
-      <!-- <TrialScreen v-if="group==='score'"
+      <TrialScreen v-if="group==='score'"
         :trial="trial"
         :key="'experiment-' + i"
         :trial-type="'experiment'"
@@ -189,7 +189,7 @@
         :text="trial.text"
         :task="true"
         :group=group
-      /> -->
+      />
 
     </template>
     
