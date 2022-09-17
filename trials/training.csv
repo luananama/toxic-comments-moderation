@@ -1,13 +1,12 @@
-text;category;toxicity_score;correctResponse;profanity;explanation
-And may you rot in hell my good sir for no one is good enough for heaven not even you delusional folks. ;toxic;0.78;Reject;n;", even though it uses ""polite"" language, it is meant as an insult (""rot in hell"", ""delusional folks"") "
-I'm saying that anyone can claim to be transgender and then easily enter the bathroom they want to for whatever reason, moron. ;toxic;0.78;Reject;y;" it insults someone else through the term ""moron"""
-She's a hoe, plain and simple. ;toxic;0.79;Reject;y;" ""hoe"" is a derogatory term"
-I know its not right to hit a woman but GOTDAYUM i would have beat the ever living hell out of her with whatever was on hand;toxic;0.70;Reject;y; it promotes physical violence against women
-That is one of the dumbest things I've heard;non-toxic;0.63;Approve;y; it does not attack a person in particular, but rather an idea or statement
-I don't require any type of medication;non-toxic;0.07;Approve;n; it does not contain any toxic language
-The funny thing about this post is that people in thus sub are too dumb  this has nothing to do with world politics   SMH people. ;non-toxic;0.68;Approve;n;, although offensive, it does not attack a person in particular
-Damn. This has to be a record. That was a ridiculous game. Haha.;non-toxic;0.71;Approve;n; it does not contain any toxic language
-He said it was a hypothetical situation.;non-toxic;0.03;Approve;n; it does not contain any toxic language
-You're one of the dumbest people I've met;toxic;0.88;Reject;n;it insults someone directly by calling them dumb
-Because it's even safer to be in a plane with no Muslims. Less potential terrorists is more safety.;toxic;0.68;Reject;n;it promotes a harmful stereotype about Muslims being terrorrists
-Yeah, all you have to do is stop being such a bitch.;toxic;0.97;Reject;y; it insults someone, and presumably dismisses their experience by implying they are weak
+id;text;category;toxicity_score;correct_response;contains_profanity;explanation;comprehension_vulnerable
+0;And may you rot in hell my good sir for no one is good enough for heaven not even you delusional folks. ;toxic;76,27;Reject;n;", even though it uses ""polite"" language, it is meant as an insult (""rot in hell"", ""delusional folks"") ";n
+1;I'm saying that anyone can claim to be transgender and then easily enter the bathroom they want to for whatever reason, moron. ;toxic;83,46;Reject;y;" it insults someone else through the term ""moron""";y
+2;She's a hoe, plain and simple. ;toxic;79,7;Reject;y;" ""hoe"" is a derogatory term";y
+3;I know its not right to hit a woman but GOTDAYUM i would have beat the ever living hell out of her with whatever was on hand;toxic;68,09;Reject;y; it promotes physical violence against women;y
+4;That is one of the dumbest things I've heard;non-toxic;63,57;Approve;y; it does not attack a person in particular, but rather an idea or statement;n
+5;I don't require any type of medication;non-toxic;3,54;Approve;n; it does not contain any toxic language;n
+7;Damn. This has to be a record. That was a ridiculous game. Haha.;toxic;70,08;Approve;n; it does not contain any toxic language;n
+8;He said it was a hypothetical situation.;non-toxic;3,7;Approve;n; it does not contain any toxic language;n
+9;You're one of the dumbest people I've met;toxic;88,31;Reject;n;it insults someone directly by calling them dumb;n
+10;Because it's even safer to be in a plane with no Muslims. Less potential terrorists is more safety.;toxic;68,28;Reject;n;it promotes a harmful stereotype about Muslims being terrorrists;n
+11;Yeah, all you have to do is stop being such a bitch.;toxic;94,48;Reject;y; it insults someone, and presumably dismisses their experience by implying they are weak;y

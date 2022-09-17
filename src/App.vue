@@ -9,6 +9,7 @@
         <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
         <br>  
         The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
+        <!-- <button @click="$magpie.nextScreen('experiment')">jump to experiment</button> -->
       </div>
     </InstructionScreen>
 
@@ -16,18 +17,32 @@
     <InstructionScreen :title="'Instructions'">
         <div class="instructionstext">
           <p>
-            It's easy to be mean on the internet. Today you will take the role of a <b>moderator</b> and try to keep online conversations civilized, nice, and with no mean comments.
+            It's easy to be mean on the internet. Today you will take the role of a <b>moderator</b> and try to keep online conversations civilized, nice, and with no mean comments! {{emoji(129303)}}
           </p>
 
           <p> 
-            Your task is to read real comments from online conversations on platforms like twitter, reddit, or wikipedia talk, and decide if they should be published online (<b>APPROVE</b>), or deleted (<b>REJECT</b>).
+            Your task is to read <b>real comments</b> from online conversations on platforms like twitter, reddit, or wikipedia talk, and decide if they should be published online (<b>APPROVE</b>), or deleted (<b>REJECT</b>).
           </p>  
           <p v-if="group=='score'"> 
-            To help you, an AI assistant will show you how likely it is that a comment is <b>toxic</b>. You can use this score to help you make a decision, but don't rely too much on it.
-          </p>
+            {{emoji(128187 )}} To help you, an AI assistant will show you how likely it is that a comment is <b>toxic</b>. You can use this score to help you make a decision, but don't rely too much on it. 
+            <br>
+            An additional question will ask whether you agree with the AI, that is if the likelihood that the comment is toxic is also what you imagined. 
+          </p> 
+        </div>
+    </InstructionScreen>
+
+    <InstructionScreen :title="'Instructions'">
+        <div class="instructionstext">
           <p> 
-            One more thing: every now and then you will be asked to <b>answer a question</b> (<i>"{{comprehension_question}}"</i>) about the comment you just read, so always pay attention to the text! 
+            {{emoji(9995)}} One more thing: every now and then you will be asked to <b>answer a question</b> about the comment you just read, so always pay attention to the text! This is the question:
           </p>
+          <p>
+            <i>"{{comprehension_question}}"</i>
+          </p>
+          <p>
+            You can answer "yes" even if the group isn't mentioned directly, but it's <b>implied</b>. For example in a comment about a blind person, the implied group is people with disabilities.
+          </p>
+
         </div>
     </InstructionScreen>
          
@@ -45,8 +60,9 @@
           <li>comments that don't make sense, or that is just trying to provoke a reaction (trolling) </li>
         </ul>
       </p>
-    
-      Note: A comment can contain <b>bad words</b> (profanity), and not be considered toxic. 
+      
+
+      {{emoji(128173)}} Note: A comment can contain <b>bad words</b> (profanity), and not be considered toxic. 
       
       <p>
         Let's continue to a short training phase, to properly understand what you have to do!
@@ -89,7 +105,7 @@
       <TrialScreen v-if="group==='score'"
         :trial="trial"
         :key="'training-score-' + i"
-        :trialType="'training'"
+        :trialType="'training-task'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
         :options="['Approve', 'Reject']"
@@ -103,7 +119,7 @@
       <TrialScreen v-else
         :trial="trial"
         :key="'training-no-score-' + i"
-        :trialType="'training'"
+        :trialType="'training-task'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
         :options="['Approve', 'Reject']"
@@ -117,11 +133,11 @@
           
       <!--------------------------------------------------- comprehension question  ---------------------------------------------------->
 
-      <!-- comprehension question is provided with a higher probability than in the experiment phase -->
+      <!-- comprehension question is provided with a higher probability during the practice phase -->
       <TrialScreen v-if="Math.random() < 0.8"
         :trial="trial"
         :key="'training-comprehension-' + i"
-        :trialType="'training'"
+        :trialType="'training-comprehension'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
         :options="['Yes', 'No']"
@@ -137,8 +153,8 @@
     <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Experiment  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
 
     <!-- The experiment phase  -->
-    <Screen :title="'Experiment'">
-			Practice round is over! The next questions will provide no feedback. Read each one carefully and make a decision according to what you think is correct.
+    <Screen :title="'Experiment'" label="experiment">
+			Practice round is over! In the next phase you will get no feedback. Read each comment carefully and make a decision according to what you think is correct.
 			<br>
 			<br>
 			When you are ready, <b>click the button to start the experiment</b>.
@@ -168,7 +184,7 @@
       <TrialScreen
         :trial="trial"
         :key="'experiment-' + i"
-        :trial-type="'experiment'"
+        :trial-type="'experiment-task'"
         :trialnumber="i"
         :progress="i/main_trials.length"
         :options="['Approve', 'Reject']"
@@ -181,7 +197,7 @@
       <TrialScreen v-if="group==='score'"
         :trial="trial"
         :key="'experiment-manipulation-check-' + i"
-        :trial-type="'experiment'"
+        :trial-type="'experiment-agree'"
         :trialnumber="i"
         :progress="i/main_trials.length"
         :options="['Yes', 'No']"
@@ -191,14 +207,11 @@
         :group=group
       />
 
-    </template>
-    
-
-<!-- Comprehension question is provided with a higher probability than in the experiment phase -->
-      <TrialScreen v-if="Math.random() < 0.2"
+  <!-- Comprehension question is provided with a lower probability in the experiment phase -->
+  <TrialScreen v-if="Math.random() < 0.3"
         :trial="trial"
         :key="'experiment-comprehension-' + i"
-        :trialType="'experiment'"
+        :trialType="'experiment-comprehension'"
         :trialnumber="i"
         :progress="i / main_trials.length"
         :options="['Yes', 'No']"
@@ -207,9 +220,53 @@
         :comprehension="true"
         :group=group
       />
+    </template>
 
-    <PostTestScreen />
-
+    <InstructionScreen :title="'Almost done!'">
+      <div class="instructionstext">
+        <p>
+			  <b>Please stay with us just a bit longer! {{emoji(9749)}}</b>
+        <br>
+        On the next screen you can fill out some personal information. If you study at the Osnabrueck University, you can earn 1 VP for your participation. 
+        In order to claim that, please submit your <b>Matrikelnummer</b> and <b>full name</b>.  
+        <br>
+			  </p>
+      </div>
+		</InstructionScreen>
+      
+  <!-- <PostTestScreen/> -->
+    <PostTestScreen :education="false" :age="false" :gender="false" :comments="false" :languages="false">
+      <template #default>
+        <label>Full name (only for claiming VP hours)<input type="text" v-model=$magpie.measurements.name></label>
+        <label>Matrikelnummer (only for claiming VP hours)<input type="text" v-model=$magpie.measurements.matrikelnr></label>
+        <label>Native languages<input type="text" v-model=$magpie.measurements.languages></label>
+        <label>Age <br><input v-model="$magpie.measurements.age" type="number" max="110" min="18"/></label>
+        <br>
+        <label>Do you belong to any identity groups? 
+            <DropdownInput :options="[
+                      '',
+                      'I do not belong to any identity groups.',
+                      'LGBTQ',
+                      'People with disabilities',
+                      'Racial/Ethnic minority',
+                      'Religious minority',
+                      'Neurodivergent people',
+                      'Gender minority',
+                      'Other'
+                      ]"
+                    :response.sync="$magpie.measurements.identity"/>
+        </label>
+        <label>Do you regularly participate in activist events or keep up with activist content?
+            <DropdownInput :options="[
+                      '',
+                      'Yes',
+                      'No'
+                      ]"
+                    :response.sync="$magpie.measurements.activism"/>
+        </label>
+      </template>
+    </PostTestScreen>
+ 
     <DebugResultsScreen />
     <!-- <SubmitResultsScreen /> -->
   </Experiment>
@@ -221,11 +278,11 @@ import practice from '../trials/training.csv';
 import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
-const practice_trials = _.sampleSize(_.shuffle(practice), 1);
-const main_trials = _.sampleSize(_.shuffle(main), 10);
+const practice_trials = _.sampleSize(_.shuffle(practice), 3);
+const main_trials = _.sampleSize(_.shuffle(main), 1);
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
-const comprehension_question = "Does the comment reference a group that is considered vulnerable, disadvantaged, or often discriminated against?";
+const comprehension_question = "Is the comment about a group that is considered vulnerable, disadvantaged, or often discriminated against?";
 
 export default {
   name: 'App',

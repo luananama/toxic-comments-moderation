@@ -14,7 +14,7 @@
       <template #stimulus>
 
         <div class="hintstext">
-            <p v-if="trialType==='training'" >
+            <p v-if="trialType.includes('training')" >
               <b>{{instructions}}</b>
             </p>
         </div>
@@ -44,20 +44,21 @@
               textID: trial.id, 
               category: trial.category, 
               toxicityScore: trial.toxicity_score,
-              profanityScore: trial.profanity_score,
               phase: trialType,
               group: group,
               correctResponse: trial.correct_response,
               comprehensionResponse: trial.comprehension_vulnerable,
-              response: $magpie.measurements.response
+              response: $magpie.measurements.response,
+              identityGroup: $magpie.measurements.identity,
+              activismParticipation: $magpie.measurements.activism
             }"
           />
       </template>
       
       <!-- During training provide feedback to the participants about their answers -->
-      <template  v-if="trialType==='training' && task===true" #feedback>
+      <template  v-if="trialType.includes('training') && task===true" #feedback>
           <div class="feedbacktext">
-          <p v-if="$magpie.measurements.response === trial.correctResponse">
+          <p v-if="$magpie.measurements.response === trial.correct_response">
             Correct! {{emoji(127881)}} 
             <!-- 128076 -  okay symbol  -->
             The comment should be rejected because <b>{{trial.explanation}}</b>.
@@ -171,11 +172,11 @@ export default {
 
 .hintstext {
     font-family: "Open Sans", sans-serif, Helvetica, Arial;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 35px;
     font-weight: 300;
     text-align: left;
-    padding: 30px;
+    padding: 20px;
     color: #373434;
 }
 
@@ -199,7 +200,7 @@ export default {
   box-shadow: 1px 1px 10px #6D2445;
 
   font-family: "Open Sans", sans-serif, Helvetica, Arial;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 300;
   text-align: center;
   vertical-align: middle;
