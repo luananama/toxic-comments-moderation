@@ -9,7 +9,7 @@
         <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
         <br>  
         The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
-        <!-- <button @click="$magpie.nextScreen('experiment')">jump to experiment</button> -->
+        <button @click="$magpie.nextScreen('experiment')">jump to experiment</button>
       </div>
     </InstructionScreen>
 
@@ -208,7 +208,7 @@
       />
 
   <!-- Comprehension question is provided with a lower probability in the experiment phase -->
-  <TrialScreen v-if="Math.random() < 0.3"
+  <TrialScreen v-if="Math.random() < 0.2"
         :trial="trial"
         :key="'experiment-comprehension-' + i"
         :trialType="'experiment-comprehension'"
@@ -279,7 +279,8 @@ import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
 const practice_trials = _.sampleSize(_.shuffle(practice), 3);
-const main_trials = _.sampleSize(_.shuffle(main), 1);
+const main_trials = _.sampleSize(_.shuffle(main), 3);
+
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
 const comprehension_question = "Is the comment about a group that is considered vulnerable, disadvantaged, or often discriminated against?";
