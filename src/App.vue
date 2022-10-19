@@ -26,7 +26,7 @@
           <p v-if="group=='score'"> 
             {{emoji(128187 )}} To help you, an AI assistant will show you how likely it is that a comment is <b>toxic</b>. You can use this score to help you make a decision, but don't rely too much on it. 
             <br>
-            An additional question will ask whether you agree with the AI, that is if the likelihood that the comment is toxic is also what you imagined. 
+            An additional question will ask whether you think the AI got close to predicting the correct answer (based on the likelihood score). 
           </p> 
         </div>
     </InstructionScreen>
@@ -34,13 +34,13 @@
     <InstructionScreen :title="'Instructions'">
         <div class="instructionstext">
           <p> 
-            {{emoji(9995)}} One more thing: every now and then you will be asked to <b>answer a question</b> about the comment you just read, so always pay attention to the text! This is the question:
+            {{emoji(9995)}} Every now and then you will be asked to <b>answer a question</b> about the comment you just read, so always pay attention to the text! This is the question:
           </p>
           <p>
             <i>"{{comprehension_question}}"</i>
           </p>
           <p>
-            You can answer "yes" even if the group isn't mentioned directly, but it's <b>implied</b>. For example in a comment about a blind person, the implied group is people with disabilities.
+            For example, in a comment making fun of a blind person, the implied group is people with disabilities, and the answer is "<i>yes</i>".
           </p>
 
         </div>
@@ -57,7 +57,7 @@
           <li>comments that attack a person or a minority group</li>
           <li>comments that threaten someone</li>
           <li>comments that want to hurt someone by mocking how they feel or what they experienced.</li>
-          <li>comments that don't make sense, or that is just trying to provoke a reaction (trolling) </li>
+          <li>comments that don't make sense, or are just trying to provoke a reaction (trolling) </li>
         </ul>
       </p>
       
@@ -74,7 +74,7 @@
     <InstructionScreen :title="'Practice'">
       <div class="instructionstext">
         <p>
-			  Now you will read a series of practice questions. Read the instructions and the feedback carefully, in order to understand the task. 
+			  Now you will read a few practice questions. Read the instructions and the feedback carefully, in order to understand the task. 
         <br>
         When you are ready, click the "NEXT" button to <b>start the practice session</b>!
 			  </p>
@@ -86,21 +86,6 @@
 
     <!-- Practice trials -->
     <template v-for="(trial, i) of practice_trials">
-      <!-- Provide the plain text for the participant to read before the task -->
-
-       <!-- <TrialScreen
-        :trial="trial"
-        :key="'training-' + i"
-        :trialType="'training'"
-        :trialnumber="i"
-        :progress="i / practice_trials.length"
-        :options="['I have read the text']"
-        :text="trial.text"
-        :instructions="'Read the text below.'"
-        :task="false"
-        :group=group
-      /> -->
-
       <!-- The task, where the participant can make a decision  -->
       <TrialScreen v-if="group==='score'"
         :trial="trial"
@@ -165,21 +150,6 @@
 
   <!-- Trials -->
     <template v-for="(trial, i) of main_trials" >
-      <!-- Provide the plain text for the participant to read before the task -->     
-     <!-- <TrialScreen
-        :trial="trial"
-        :key="'experiment-' + i"
-        :trial-type="'experiment'"
-        :trialnumber="i"
-        :progress="i/main_trials.length"
-        :options="['I have read the text']"
-        :text="trial.text"
-        :task="false"
-        :group=group
-      /> -->
-
-      
-      
       <!-- The task, where the participant can make a decision  -->
       <TrialScreen
         :trial="trial"
@@ -201,7 +171,7 @@
         :trialnumber="i"
         :progress="i/main_trials.length"
         :options="['Yes', 'No']"
-        :question="'Do you agree with the score?'"
+        :question="'Do you think the AI prediction was close?'"
         :text="trial.text"
         :task="true"
         :group=group
@@ -278,12 +248,13 @@ import practice from '../trials/training.csv';
 import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
+
 const practice_trials = _.sampleSize(_.shuffle(practice), 3);
-const main_trials = _.sampleSize(_.shuffle(main), 3);
+const main_trials = _.sampleSize(_.shuffle(main), 40);
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
-const comprehension_question = "Is the comment about a group that is considered vulnerable, disadvantaged, or often discriminated against?";
+const comprehension_question = "Does the comment mention any of the following (derogative terms not included): women, LGBTQ people, a specific race, ethnicity or religion, people with disabilities, neurodivergent people?";
 
 export default {
   name: 'App',
