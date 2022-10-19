@@ -85,8 +85,7 @@
           </div>
         </template> 
         <!-- Skip feedback during experiment phase. Couldn't find a better way to do this -->
-        <template v-else #feedback>
-           
+        <template v-else #feedback> 
           <Wait :time="1" @done= "$magpie.saveAndNextScreen()" />
         </template>
     </ForcedChoiceScreen>
