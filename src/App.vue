@@ -7,10 +7,12 @@
     <InstructionScreen>
       <div class="instructionstext">
         <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
-        <br>  
+        <p>  
         The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
-        <br>
+        </p>
+        <p>
         The experiment duration is between 10 and 15 minutes.
+        </p>
         <!-- <button @click="$magpie.nextScreen('experiment')">jump to experiment</button> -->
       </div>
     </InstructionScreen>
@@ -239,8 +241,8 @@
       </template>
     </PostTestScreen>
  
-    <DebugResultsScreen />
-    <!-- <SubmitResultsScreen /> -->
+    <!-- <DebugResultsScreen /> -->
+    <SubmitResultsScreen />
   </Experiment>
 </template>
 

@@ -29,7 +29,6 @@
           </div>
           <br>
           <div v-if="task===true && group==='score'" class="score">
-            <!-- <p v-if="group==='score'">  -->
               <p>
               {{emoji(128226)}}  
               The AI says this comment is <b>{{parseFloat(trial.toxicity_score).toFixed(0)}}% likely to be toxic</b>.
@@ -146,13 +145,6 @@ export default {
       return String.fromCodePoint(codePoint);
     }
   },
-  // data() {
-  //   const group = _.sample(['score', 'no_score']);
-    
-  //   return {
-  //     group: group
-  //   }
-  // },
 };
 
 </script>
