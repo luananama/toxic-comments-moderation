@@ -9,6 +9,8 @@
         <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
         <br>  
         The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
+        <br>
+        The experiment duration is between 10 and 15 minutes.
         <!-- <button @click="$magpie.nextScreen('experiment')">jump to experiment</button> -->
       </div>
     </InstructionScreen>
