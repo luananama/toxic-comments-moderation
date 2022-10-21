@@ -43,9 +43,6 @@
           <p>
             <i>"{{comprehension_question}}"</i>
           </p>
-          <p>
-            For example, in a comment making fun of a blind person, the implied group is people with disabilities, and the answer is "<i>yes</i>".
-          </p>
 
         </div>
     </InstructionScreen>
@@ -258,7 +255,7 @@ const main_trials = _.sampleSize(_.shuffle(main), 40);
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
-const comprehension_question = "Does the comment mention any of the following (derogative terms not included): women, LGBTQ people, a specific race, ethnicity or religion, people with disabilities, neurodivergent people?";
+const comprehension_question = "Does the comment mention any of the following: LGBTQ people, a specific race, an ethnic or religious group?";
 
 export default {
   name: 'App',
