@@ -253,8 +253,8 @@ import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
 
-const practice_trials = _.sampleSize(_.shuffle(practice), 3);
-const main_trials = _.sampleSize(_.shuffle(main), 40);
+const practice_trials = _.sampleSize(_.shuffle(practice), 1); 
+const main_trials = _.sampleSize(_.shuffle(main), 1);
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
