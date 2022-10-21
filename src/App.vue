@@ -11,7 +11,7 @@
         The following experiment contains text that can be upsetting or triggering to some people. While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by profanity, insults or controversial comments.
         </p>
         <p>
-        The experiment duration is between 10 and 15 minutes.
+        <i>The experiment duration is between 10 and 15 minutes.</i>
         </p>
         <!-- <button @click="$magpie.nextScreen('experiment')">jump to experiment</button> -->
       </div>
@@ -253,8 +253,8 @@ import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
 
-const practice_trials = _.sampleSize(_.shuffle(practice), 1); 
-const main_trials = _.sampleSize(_.shuffle(main), 1);
+const practice_trials = _.sampleSize(_.shuffle(practice), 3); 
+const main_trials = _.sampleSize(_.shuffle(main), 40);
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
