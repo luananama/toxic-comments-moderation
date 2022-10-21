@@ -1,6 +1,7 @@
 export default {
   experimentId: '1',
   serverUrl: 'https://moderator-experiment.herokuapp.com/',
+  socketUrl: 'wss://moderator-experiment.herokuapp.com/socket',
   completionUrl: 'wss://moderator-experiment.herokuapp.com/socket',
   contactEmail: 'luana.mariav@gmail.com',
   // Either 'debug', 'directLink' or 'prolific'
