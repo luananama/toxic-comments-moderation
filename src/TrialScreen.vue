@@ -48,8 +48,6 @@
               correctResponse: trial.correct_response,
               comprehensionResponse: trial.comprehension_vulnerable,
               response: $magpie.measurements.response,
-              identityGroup: $magpie.measurements.identity,
-              activismParticipation: $magpie.measurements.activism
             }"
           />
       </template>
@@ -61,31 +59,31 @@
               Correct! {{emoji(127881)}} 
               <!-- 128076 -  okay symbol  -->
               The comment should be rejected because<b>{{trial.explanation}}</b>.
-              <button @click="$magpie.saveAndNextScreen()">Ok</button>
+              <button @click="$magpie.nextScreen()">Ok</button>
             </p>
             <!-- If the answer was incorrect provide an explanation why -->
             <p v-else-if="trial.correct_response === 'Reject' && $magpie.measurements.response !== trial.correct_response">
               Incorrect... {{emoji(128579)}}
               The comment should be rejected because <b>{{trial.explanation}}</b>.
-              <button @click="$magpie.saveAndNextScreen()">Ok</button>
+              <button @click="$magpie.nextScreen()">Ok</button>
             </p>
             <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response === trial.correct_response">
               Correct! {{emoji(127881)}} 
               <!-- 128076 -  okay symbol  -->
               The comment should be approved because<b>{{trial.explanation}}</b>.
-              <button @click="$magpie.saveAndNextScreen()">Ok</button>
+              <button @click="$magpie.nextScreen()">Ok</button>
             </p>
             <!-- If the answer was incorrect provide an explanation why -->
             <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response !== trial.correct_response">
               Incorrect... {{emoji(128579)}}
               The comment should be approved because <b>{{trial.explanation}}</b>.
-              <button @click="$magpie.saveAndNextScreen()">Ok</button>
+              <button @click="$magpie.nextScreen()">Ok</button>
             </p>
           </div>
         </template> 
         <!-- Skip feedback during experiment phase. Couldn't find a better way to do this -->
         <template v-else #feedback> 
-          <Wait :time="1" @done= "$magpie.saveAndNextScreen()" />
+          <Wait :time="1" @done= "$magpie.nextScreen()" />
         </template>
     </ForcedChoiceScreen>
 </template>
