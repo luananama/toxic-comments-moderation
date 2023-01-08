@@ -5,48 +5,29 @@
 
     <!--------------------------------------------------- sensitive content warning ---------------------------------------------------->
     <Screen>
-    <Slide>
-      <div class="instructionstext">
-        <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
-        <p>  
-          In this experiment you will be asked to moderate real online comments, some of which can be <b>upsetting or triggering</b> to some people. 
-          Please only continue participating if you are not affected by profanity, insults or controversial comments.
-        </p>
-        <p>
-          The personal information required at the end of the experiment is completely <b>voluntary</b>, will remain <b>confidential</b> and will not be associated with your name.  
-        </p>
-        <p>
-        <i>The experiment duration is between 10 and 15 minutes. </i>
-        </p>
-        <p>
-          <b>
-          By clicking the button below, you consent to the terms above and agree to participate in the experiment. 
-          </b>
-        </p>
-        <button @click="$magpie.nextScreen()">I consent</button>
-      </div>
-    </Slide>
-</Screen>
+      <Slide>
+        <div class="instructionstext">
+          <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
+          <p>  
+            In this experiment you will be asked to moderate real online comments, some of which can be <b>upsetting or triggering</b> to some people. 
+            Please only continue participating if you are not affected by profanity, insults or controversial comments.
+          </p>
+          <p>
+            The personal information required at the end of the experiment is completely <b>voluntary</b>, will remain <b>confidential</b> and will not be associated with your name.  
+          </p>
+          <p>
+          <i>The experiment duration is between 10 and 15 minutes. </i>
+          </p>
+          <p>
+            <b>
+            By clicking the button below, you consent to the terms above and agree to participate in the experiment. 
+            </b>
+          </p>
+          <button @click="$magpie.nextScreen()">I consent</button>
+        </div>
+      </Slide>
+    </Screen>
     
-    <!-- <InstructionScreen>
-      <div class="instructionstext">
-        <img src="../public/images/warning.png" alt="warning" class="center"  width="100" />
-        <p>  
-          In this experiment you will be asked to moderate real online comments, som of which can be upsetting or triggering to some people. By continuing the study you consent to being exposed 
-          to texts containing profanity, insults or controversial comments.
-          The personal information required at the end of the experiment is completely voluntary and will remain confidential and will not be associated with your name.  
-        The following experiment  While we tried to keep these texts to a minimum necessary, please only continue participating if you are not affected by .
-        </p>
-        <p>
-        <i>The experiment duration is between 10 and 15 minutes. T</i>
-        </p>
-        <p>>
-          By clicking the button below, you consent to the terms above and agree to participate in the experiment. 
-        </p>
-        <button @click="$magpie.nextScreen('experiment')">jump to experiment</button>
-      </div>
-    </InstructionScreen> -->
-
     <!----------------------------------------------------- description of task -- ---------------------------------------------------->
     <InstructionScreen :title="'Instructions'">
         <div class="instructionstext">
@@ -280,7 +261,7 @@ import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
 
 const practice_trials = _.sampleSize(_.shuffle(practice), 3); 
-const main_trials = _.sampleSize(_.shuffle(main), 20);
+const main_trials = _.sampleSize(_.shuffle(main), 40);
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
