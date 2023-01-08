@@ -45,6 +45,7 @@
               toxicityScore: trial.toxicity_score,
               phase: trialType,
               group: group,
+              text: text,
               correctResponse: trial.correct_response,
               comprehensionResponse: trial.comprehension_vulnerable,
               response: $magpie.measurements.response,
