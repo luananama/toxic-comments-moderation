@@ -1,5 +1,5 @@
 export default {
-  experimentId: '1',
+  experimentId: '2',
   serverUrl: 'https://experiment-backend.herokuapp.com/',
   completionUrl: 'wss://experiment-backend.herokuapp.com/socket',
   contactEmail: 'luana.mariav@gmail.com',
