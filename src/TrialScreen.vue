@@ -54,7 +54,7 @@
       </template>
       
       <!-- During training provide feedback to the participants about their answers -->
-      <template  v-if="trialType.includes('training') && task===true" #feedback>
+      <template  v-if="trialType.includes('training-task') && task===true" #feedback>
           <div class="feedbacktext">
           <p v-if="trial.correct_response === 'Reject' && $magpie.measurements.response === trial.correct_response">
               Correct! {{emoji(127881)}} 

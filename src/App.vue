@@ -127,6 +127,19 @@
         :group=group
       />
       
+      <TrialScreen v-if="group==='score'"
+        :trial="trial"
+        :key="'training-manipulation-check-' + i"
+        :trial-type="'training-agree'"
+        :trialnumber="i"
+        :progress="i/practice_trials.length"
+        :options="['Yes', 'No']"
+        :instructions="'Answer the question provided about the AI prediction score.'"
+        :question="'Do you think the AI prediction was close?'"
+        :text="trial.text"
+        :task="true"
+        :group=group
+      />
           
       <!--------------------------------------------------- comprehension question  ---------------------------------------------------->
 
@@ -139,7 +152,7 @@
         :progress="i / practice_trials.length"
         :options="['Yes', 'No']"
         :text=comprehension_question
-        :instructions="'Answer the question below based on the comment you read before.'"
+        :instructions="'Answer the question below based on the comment you read before. This question will only show up sometimes.'"
         :task="false"
         :comprehension="true"
         :group=group
