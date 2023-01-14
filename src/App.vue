@@ -249,7 +249,7 @@
                       ]"
                     :response.sync="$magpie.measurements.identity"/>
         </label>
-        <label>Do you regularly participate in activist events or keep up with activist content?
+        <label>Have you ever moderated online content, either as a volunteer or for remuneration?
             <DropdownInput :options="[
                       '',
                       'Yes',
