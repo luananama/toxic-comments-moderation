@@ -105,7 +105,7 @@
         :trialType="'training-task'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
-        :options="response()"
+        :options="[emoji(9989)+' Approve', emoji(10060) + ' Reject']"
         :text="trial.text"
         :instructions="'Notice the TOXICITY SCORE. Reject the comment if you think it is toxic, approve it otherwise.'"
         :question="emoji(128718)"
@@ -260,7 +260,7 @@
       </template>
     </PostTestScreen>
  
-    <!-- <DebugResultsScreen /> -->
+    <DebugResultsScreen />
     <SubmitResultsScreen />
   </Experiment>
 </template>
