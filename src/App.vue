@@ -36,7 +36,7 @@
           </p>
 
           <p> 
-            Your task is to read <b>real comments</b> from online conversations on platforms like twitter, reddit, or wikipedia talk, and decide if they should be published online (<b>APPROVE</b>), or deleted (<b>REJECT</b>).
+            Your task is to read <b>real comments</b> from online conversations on platforms like twitter, reddit, or wikipedia talk, and decide if they should be published online ({{emoji(9989)}} <b>APPROVE</b>), or deleted ({{ emoji(10060) }} <b>REJECT</b>).
           </p>  
           <p v-if="group=='score'"> 
             {{emoji(128187 )}} To help you, an AI assistant will show you how likely it is that a comment is <b>toxic</b>. You can use this score to help you make a decision, but don't rely too much on it. 
@@ -57,7 +57,7 @@
 
         </div>
     </InstructionScreen>
-         
+    
     <InstructionScreen :title="'Instructions'">
     <div contenteditable="true" class="instructionstext">
       <p>
@@ -95,7 +95,7 @@
     
 
     <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Training  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
-
+    <!-- "['Approve', 'Reject']" -->
     <!-- Practice trials -->
     <template v-for="(trial, i) of practice_trials">
       <!-- The task, where the participant can make a decision  -->
@@ -105,7 +105,7 @@
         :trialType="'training-task'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
-        :options="['Approve', 'Reject']"
+        :options="response()"
         :text="trial.text"
         :instructions="'Notice the TOXICITY SCORE. Reject the comment if you think it is toxic, approve it otherwise.'"
         :question="emoji(128718)"
@@ -119,7 +119,7 @@
         :trialType="'training-task'"
         :trialnumber="i"
         :progress="i / practice_trials.length"
-        :options="['Approve', 'Reject']"
+        :options="[emoji(9989)+' Approve', emoji(10060) + ' Reject']"
         :text="trial.text"
         :instructions="'Reject the comment if you think it is toxic, approve it otherwise.'"
         :question="emoji(128718)"
@@ -172,7 +172,6 @@
 				Start
 			</button>
 		</Screen>
-
   <!-- Trials -->
     <template v-for="(trial, i) of main_trials" >
       <!-- The task, where the participant can make a decision  -->
@@ -182,7 +181,7 @@
         :trial-type="'experiment-task'"
         :trialnumber="i"
         :progress="i/main_trials.length"
-        :options="['Approve', 'Reject']"
+        :options="[emoji(9989)+' Approve', emoji(10060) + ' Reject']"
         :text="trial.text"
         :task="true"
         :question="emoji(128718)"
@@ -286,8 +285,10 @@ export default {
   methods: {
     emoji(codePoint) {
       return String.fromCodePoint(codePoint);
-    }
+    },
   },
+
+
   data() {
     // randomly sample n items for the practice phase
     
