@@ -49,6 +49,7 @@
               correctResponse: trial.correct_response,
               comprehensionResponse: trial.comprehension_vulnerable,
               response: $magpie.measurements.response,
+              lenText: trial.lenText,
             }"
           />
       </template>
