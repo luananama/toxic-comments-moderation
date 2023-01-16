@@ -272,8 +272,19 @@ import main from '../trials/main_new.csv';
 import TrialScreen from './TrialScreen.vue';
 import _ from 'lodash';
 
-const practice_trials = _.sampleSize(_.shuffle(practice), 3); 
-const main_trials = _.sampleSize(_.shuffle(main), 40);
+// used to select an equal number of trials from each category combination
+const reject_not_toxic = main.filter(function(row) {
+    return row['correct_response'] == 'Reject' && row['category'] == 'not_toxic';
+});
+const reject_toxic = main.filter(function(row) {
+        return row['correct_response'] == 'Reject' && row['category'] == 'toxic';
+    });
+const approve_not_toxic = main.filter(function(row) {
+    return row['correct_response'] == 'Approve' && row['category'] == 'not_toxic';
+});
+const approve_toxic = main.filter(function(row) {
+    return row['correct_response'] == 'Approve' && row['category'] == 'toxic';
+});
 
 // whether the participant will be shown the toxicity score or not
 const group = _.sample(['score', 'no_score']);
@@ -288,13 +299,10 @@ export default {
     },
   },
 
-
   data() {
-    // randomly sample n items for the practice phase
-    
     return {
-      practice_trials,
-      main_trials,
+      main_trials: _.shuffle(_.concat( _.sampleSize(reject_not_toxic, 10), _.sampleSize(reject_toxic, 10), _.sampleSize(approve_not_toxic, 10), _.sampleSize(approve_toxic, 10))),
+      practice_trials: _.sampleSize(_.shuffle(practice), 3), 
       group,
       comprehension_question,
       // Expose lodash.range to template above
