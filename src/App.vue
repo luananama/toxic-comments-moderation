@@ -221,7 +221,7 @@
         <p>
 			  <b>Please stay with us just a bit longer! {{emoji(9749)}}</b>
         <br>
-        On the next screen you can fill out some personal information. If you study at the Osnabrueck University, you can earn 1 VP for your participation. 
+        On the next screen you can fill out some personal information. If you study at the Osnabrueck University, you can earn 1/2 VP for your participation. 
         In order to claim that, please submit your <b>Matrikelnummer</b> and <b>full name</b>.  
         <br>
 			  </p>
@@ -234,17 +234,17 @@
         <label>Matrikelnummer (only for claiming VP hours)<input type="text" v-model=$magpie.measurements.matrikelnr></label>
         <label>Native language(s)<input type="text" v-model=$magpie.measurements.languages></label>
         <label>Age <br><input v-model="$magpie.measurements.age" type="number" max="110" min="18"/></label>
+        <br>  
         <label>Gender
             <DropdownInput :options="[
                       '',
+                      'Non-binary',
                       'Female',
                       'Male',
-                      'Non-binary',
                       'Other',
                       ]"
                     :response.sync="$magpie.measurements.identity"/>
         </label>
-        <br>
         <label>Do you belong to any identity groups? 
             <DropdownInput :options="[
                       '',
