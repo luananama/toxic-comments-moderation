@@ -55,28 +55,29 @@
       </template>
       
       <!-- During training provide feedback to the participants about their answers -->
-      <template  v-if="trialType.includes('training-task') && task===true" #feedback>
+      <template  v-if="trialType.includes('training-task') && task === true" #feedback>
           <div class="feedbacktext">
-          <p v-if="trial.correct_response === 'Reject' && $magpie.measurements.response === trial.correct_response">
+            <!-- must concatenate the correct response with the emojis, otherwise the conditions will not be true because the strings don't match -->
+          <p v-if="trial.correct_response === 'Reject' && $magpie.measurements.response === emoji(10060)+' ' + trial.correct_response">
               Correct! {{emoji(127881)}} 
               <!-- 128076 -  okay symbol  -->
               The comment should be rejected because<b>{{trial.explanation}}</b>.
               <button @click="$magpie.nextScreen()">Ok</button>
             </p>
             <!-- If the answer was incorrect provide an explanation why -->
-            <p v-else-if="trial.correct_response === 'Reject' && $magpie.measurements.response !== trial.correct_response">
+            <p v-else-if="trial.correct_response === 'Reject' && $magpie.measurements.response !== emoji(10060)+' ' + trial.correct_response">
               Incorrect... {{emoji(128579)}}
               The comment should be rejected because <b>{{trial.explanation}}</b>.
               <button @click="$magpie.nextScreen()">Ok</button>
             </p>
-            <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response === trial.correct_response">
+            <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response === emoji(9989)+ ' ' + trial.correct_response">
               Correct! {{emoji(127881)}} 
               <!-- 128076 -  okay symbol  -->
               The comment should be approved because<b>{{trial.explanation}}</b>.
               <button @click="$magpie.nextScreen()">Ok</button>
             </p>
             <!-- If the answer was incorrect provide an explanation why -->
-            <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response !== trial.correct_response">
+            <p v-else-if="trial.correct_response === 'Approve' && $magpie.measurements.response !== emoji(9989)+ ' ' + trial.correct_response">
               Incorrect... {{emoji(128579)}}
               The comment should be approved because <b>{{trial.explanation}}</b>.
               <button @click="$magpie.nextScreen()">Ok</button>
