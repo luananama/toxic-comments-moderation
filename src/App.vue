@@ -269,8 +269,6 @@
         </label>
       </template>
     </PostTestScreen>
- 
-    <DebugResultsScreen />
     <SubmitResultsScreen />
   </Experiment>
 </template>
