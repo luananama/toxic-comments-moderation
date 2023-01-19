@@ -243,7 +243,7 @@
                       'Male',
                       'Other',
                       ]"
-                    :response.sync="$magpie.measurements.identity"/>
+                    :response.sync="$magpie.measurements.gender"/>
         </label>
         <label>Do you belong to any identity groups? 
             <DropdownInput :options="[
