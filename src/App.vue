@@ -232,8 +232,18 @@
       <template #default>
         <label>Full name (only for claiming VP hours)<input type="text" v-model=$magpie.measurements.name></label>
         <label>Matrikelnummer (only for claiming VP hours)<input type="text" v-model=$magpie.measurements.matrikelnr></label>
-        <label>Native languages<input type="text" v-model=$magpie.measurements.languages></label>
+        <label>Native language(s)<input type="text" v-model=$magpie.measurements.languages></label>
         <label>Age <br><input v-model="$magpie.measurements.age" type="number" max="110" min="18"/></label>
+        <label>Gender
+            <DropdownInput :options="[
+                      '',
+                      'Female',
+                      'Male',
+                      'Non-binary',
+                      'Other',
+                      ]"
+                    :response.sync="$magpie.measurements.identity"/>
+        </label>
         <br>
         <label>Do you belong to any identity groups? 
             <DropdownInput :options="[
