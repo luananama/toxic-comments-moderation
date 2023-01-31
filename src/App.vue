@@ -2,7 +2,15 @@
   <Experiment title="Moderation of online comments">
 
   <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Instructions  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
-
+  <Screen>
+      <Slide>
+        <div class="instructionstext">
+          <p>  
+          This experiment has finished.
+          </p>
+        </div>
+      </Slide>
+    </Screen>
     <!--------------------------------------------------- sensitive content warning ---------------------------------------------------->
     <Screen>
       <Slide>
