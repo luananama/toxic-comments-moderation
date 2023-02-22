@@ -2,6 +2,7 @@
   <Experiment title="Moderation of online comments">
 
   <!-- *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*  Instructions  *~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~*~~~* -->
+  <!-- 
   <Screen>
       <Slide>
         <div class="instructionstext">
@@ -11,6 +12,7 @@
         </div>
       </Slide>
     </Screen>
+   -->
     <!--------------------------------------------------- sensitive content warning ---------------------------------------------------->
     <Screen>
       <Slide>
